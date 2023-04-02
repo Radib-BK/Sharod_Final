@@ -1,5 +1,5 @@
 <?php
-	include('includes/connect.php');
+include('includes/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -66,14 +66,14 @@
 				<h2 class="text-center text-warning-emphasis my-2 py-2 px-1">CATEGORIES</h2>
 				<ul class="me-auto text-center">
 					<?php
-						$select_category="select * from `categories`";
-						$result_category=mysqli_query($con,$select_category);
-						
-						while ($row_data=mysqli_fetch_assoc($result_category)) {
-							$category_title = $row_data['category_title'];
-							$category_id = $row_data['category_id'];
-							echo " <li> <a href='shop.php?category=$category_id' class='nav-link text-light'> $category_title </a></li>";
-						}
+					$select_category = "select * from `categories`";
+					$result_category = mysqli_query($con, $select_category);
+
+					while ($row_data = mysqli_fetch_assoc($result_category)) {
+						$category_title = $row_data['category_title'];
+						$category_id = $row_data['category_id'];
+						echo " <li> <a href='shop.php?category=$category_id' class='nav-link text-light'> $category_title </a></li>";
+					}
 
 					?>
 				</ul>
@@ -82,18 +82,17 @@
 				<div class="row px-2">
 					<!-- fetching products  -->
 					<?php
-					$select_query="select * from `products`";
-					$result_query=mysqli_query($con,$select_query);
+					$select_query = "select * from `products`";
+					$result_query = mysqli_query($con, $select_query);
 					//$row=mysqli_fetch_assoc($result_query);
 					//echo $row['product_title'];
-					while($row=mysqli_fetch_assoc($result_query))
-					{
-						$product_id=$row['product_id'];
-						$product_title=$row['product_title'];
-						$product_description=$row['product_description'];
-						$product_image=$row['product_image'];
-						$product_price=$row['product_price'];
-						$category_id=$row['category_id'];
+					while ($row = mysqli_fetch_assoc($result_query)) {
+						$product_id = $row['product_id'];
+						$product_title = $row['product_title'];
+						$product_description = $row['product_description'];
+						$product_image = $row['product_image'];
+						$product_price = $row['product_price'];
+						$category_id = $row['category_id'];
 
 						echo "  <div class='col-md-4'>
 									<div class='card text-center'>
