@@ -24,7 +24,7 @@ include('includes/connect.php');
 		<div class="navbar">
 			<pre><a class="logo" href="index.html">{ SHAROD }</a></pre>
 			<ul class="nav-list">
-				<li><a href="index.php">Home</a></li>
+				<li class=""><a href="index.php">Home</a></li>
 				<li><a href="shop.php">Shop</a></li>
 				<li><a href="">About</a></li>
 				<li><a href="">Contact</a></li>
@@ -102,7 +102,7 @@ include('includes/connect.php');
 											<p class='card-text fs-5'>$product_description</p>
 											<p class='card-text fs-3'> Price : $product_price /=</p>
 											<a href='#' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
-											<a href='#' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
+											<a href='./product-pages/$product_title/$product_title.html' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
 										</div>
 									</div>
 								</div>";
