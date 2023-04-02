@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+/* Add a background image to the container element */
+
+.p_container {
+  position: relative;
+  display: flex;
+  height: 75rem;
+  width: 100%;
+  overflow: hidden;
+  font-size: 1.5rem;
+  background: linear-gradient(#ffffff, #e5e5e5);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Define the sidebar element and set its properties */
+.sidebar {
+  margin-top: 7.2rem;
+  background-color: #333;
+  color: #fff;
+  width: 25rem;
+  padding: 2rem;
+}
+
+/* Remove default list styling from sidebar unordered list */
+.sidebar ul {
+  list-style: none;
+}
+
+/* Set styling for each item in sidebar unordered list */
+.sidebar li {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+/* Set styling for the active item in sidebar unordered list */
+.sidebar li.active {
+  font-weight: bold;
+}
+
+/* Define the main content area and set its properties */
+.main {
+  flex-grow: 1;
+  padding: 4rem 2rem;
+}
+
+/* Hide all sections by default */
+.section {
+  display: none;
+}
+
+/* Show the active section */
+.section.active {
+  display: block;
+}
+
+/* Define styles for forms and form elements */
+form {
+  background: linear-gradient(#ffffff, rgba(252, 252, 252, 0.95));
+  padding: 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 90rem;
+  margin: auto;
+  background-color: #ffffff45;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  color: rgb(246, 223, 192);
+}
+
+button {
+  text-align: center;
+  margin-left: 33%;
+  width: 20rem;
+  margin-top: 1.1rem;
+  padding: 1.4rem;
+  border-radius: 2.5rem;
+  border: #ddd;
+  background-color: #333333e8;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0.5rem 0.6rem 0.8rem rgba(0, 0, 0, 0.268);
+}
+
+#logout_btn {
+  background-color: #ffffffe4;
+  border:#000000;
+  color: #000000;
+  padding: 1rem 7rem;
+  text-decoration:double;
+  margin: 4.4rem .2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#logout_btn:hover{
+  color: red;
+}
+
+
+
+/* Define styles for tables and table elements */
+table {
+  margin-top: 4rem;
+  width: 70%;
+  left: 13.6%;
+  position: relative;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 0.2rem solid #4b4b4b;
+}
+
+th {
+  background-color: #333;
+  color: #ddd;
+  font-weight: bold;
+}
+
+/* Set background color for even rows in tables */
+tbody tr:nth-child(even) {
+  background-color: #cecece;
+}
+
+#personalInformationForm {
+  margin-top: 45px;
+}
+
+#changePasswordForm {
+  margin-top: 45px;
+}
+
+#usernameInput {
+  background: #ebebeb30;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.274),
+    inset -6px -6px 10px 0 rgba(234, 234, 234, 0.542);
+}
+
+#emailInput {
+  background: #ebebeb30;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.274),
+    inset -6px -6px 10px 0 rgba(234, 234, 234, 0.542);
+}
+
+#phoneInput {
+  background: #ebebeb30;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.274),
+    inset -6px -6px 10px 0 rgba(234, 234, 234, 0.542);
+}
+
+#addressInput {
+  background: #ebebeb30;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.274),
+    inset -6px -6px 10px 0 rgba(234, 234, 234, 0.542);
+}
+
+#currentPasswordInput {
+  background: #ebebeb30;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.274),
+    inset -6px -6px 10px 0 rgba(234, 234, 234, 0.542);
+}
+
+#newPasswordInput {
+  background: #ebebeb30;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.274),
+    inset -6px -6px 10px 0 rgba(234, 234, 234, 0.542);
+}
+
+#confirmPasswordInput {
+  background: #ebebeb30;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.274),
+    inset -6px -6px 10px 0 rgba(234, 234, 234, 0.542);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.25s all ease;
+}
+
+@font-face {
+  font-family: "TheGwatmey";
+  src: url("../textfonts/TheGwathmey.woff") format("woff");
+}
+
+@font-face {
+  font-family: "EBGaramondItalic";
+  src: url("../textfonts/EBGaramond-Italic.woff") format("woff");
+}
+
+/*added*/
+@font-face {
+  font-family: "Karima";
+  src: url("../textfonts/Karima.ttf") format("truetype");
+}
+
+/*added*/
+@font-face {
+  font-family: "Display-Magazine";
+  src: url("../textfonts/Display-Magazine.ttf") format("truetype");
+}
+
+/*added*/
+@font-face {
+  font-family: "Magistral-Honesty";
+  src: url("../textfonts/Magistral-Honesty.ttf") format("truetype");
+}
+
+html {
+  font-size: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  min-width: 65rem;
+}
+
+:root {
+  --primary-color: #1d1d1d;
+}
+
+.container,
+.small-container,
+.medium-container {
+  width: 100%;
+  max-width: 130rem;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.small-container {
+  max-width: 100rem;
+}
+
+.medium-container {
+  max-width: 120rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.main {
+  margin-top: 7.2rem;
+}
+.main button {
+  font-size: 15px;
+}

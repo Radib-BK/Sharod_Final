@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Karima";
+    src: url('../FONT/Karima.ttf') format('truetype');
+}
+
+html {
+    min-width: 40.625rem;
+}
+
+:root {
+    --primary-color: #1d1d1d;        
+}
+
+a {
+    color: var(--primary-color);
+}

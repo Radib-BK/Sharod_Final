@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*added*/
+@font-face {
+  font-family: "Karima";
+  src: url("../textfonts/Karima.ttf") format("truetype");
+}
+
+/*added*/
+@font-face {
+  font-family: "Display-Magazine";
+  src: url("../textfonts/Display-Magazine.ttf") format("truetype");
+}
+
+/*added*/
+@font-face {
+  font-family: "Magistral-Honesty";
+  src: url("../textfonts/Magistral-Honesty.ttf") format("truetype");
+}
+
+html {
+  font-size: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  min-width: 65rem;
+}
+
+:root {
+  --primary-color: #1d1d1d;
+}
+
+.container,
+.small-container,
+.medium-container {
+  width: 100%;
+  max-width: 130rem;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.small-container {
+  max-width: 100rem;
+}
+
+.medium-container {
+  max-width: 120rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.dummy {
+  width: 100%;
+  height: 50rem;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+.wrapper {
+  overflow: hidden;
+  height: 90rem;
+  background-image: linear-gradient(#000000cb, #000000ac),url("../images/account-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 18rem 25%;
+  box-shadow: 0px 1.5rem 2rem rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper .slide-controls {
+  position: relative;
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  overflow: hidden;
+  margin: 3rem 0 1rem 0;
+  justify-content: space-between;
+  border: 0.15rem solid rgb(225, 225, 225);
+  border-radius: 2.5rem;
+}
+
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 4.8rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.slide-controls label.signup {
+  color: #ffffff;
+}
+
+.slide-controls .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 2.5rem;
+  background-color: rgb(255, 253, 208, 0.95);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#signup:checked ~ .slider-tab {
+  left: 50%;
+}
+
+#signup:checked ~ label.signup {
+  color: #000000;
+  cursor: default;
+  user-select: none;
+}
+
+#signup:checked ~ label.login {
+  color: #ffffff;
+}
+
+#login:checked ~ label.signup {
+  color: #ffffff;
+}
+
+#login:checked ~ label.login {
+  cursor: default;
+  user-select: none;
+}
+
+.wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container .form-inner {
+  display: flex;
+  width: 200%;
+}
+
+.form-container .form-inner form {
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inner form .field {
+  height: 5rem;
+  width: 100%;
+  margin: 2rem 0rem;
+}
+
+.form-inner form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0rem 2rem;
+  border-radius: 2.5rem;
+  border: 0.1rem solid lightgrey;
+  border-bottom-width: 0.2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  transition: all 0.3s ease;
+}
+
+.form-inner form .field input:focus {
+  border-color: #ff631a;
+}
+
+.form-inner form .field input::placeholder {
+  color: #878787;
+  transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+  color: #ff631a;
+}
+
+.form-inner form .pass-link {
+  text-align: center;
+}
+
+.form-inner form .pass-link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.form-inner form .pass-link a:hover {
+  color: rgb(255, 253, 208, 0.95);
+  text-decoration: underline;
+}
+
+form .btn {
+  height: 5rem;
+  border-radius: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+form .btn .btn-layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  align-self: center;
+  background-color: #333;
+  border-radius: 2.5rem;
+  transition: all 0.4s ease;
+}
+
+form .btn input[type="submit"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  border-radius: 2.5rem;
+  color: rgb(255, 253, 208, 0.95);
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+form .btn:hover input[type="submit"] {
+  color: #ff631a;
+}

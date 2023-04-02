@@ -1,0 +1,14 @@
+.nav {
+    padding-top: 1.2rem;
+    width: 100%;
+    height: 5rem;
+    position:fixed;
+    line-height: 5rem;
+    background-color: rgb(255, 253, 208, 0.95);
+    justify-content: center;
+    z-index: 1;
+}
+
+.navrow{
+    padding-top: 5rem;
+}

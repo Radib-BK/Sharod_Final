@@ -1,0 +1,118 @@
+.navbar {
+    width: 100%;
+    height: 4.6875rem;
+    position: relative;
+    line-height: 4.6875rem;
+    background-color: rgba(255, 253, 208, 0.95);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list li {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.navbar .nav-list a {
+    font-family: "Josefin Sans";
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color .25s;
+}
+
+.navbar .nav-list a:hover {
+    color: #d78e35;
+}
+
+.navbar a {
+    transition: opacity .3s;
+}
+
+.navbar a:hover {
+    opacity: .65;
+}
+
+.navbar .nav-icon {
+    float: right;
+    position: relative;
+    font-size: 20px;
+    height: 75px;
+    margin-right: 1.25rem;
+}
+
+.navbar .nav-icon i {
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+.menu-toggle {
+    font-size: 1.375rem;
+    color: #ddd;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+@media only screen and (max-width: 950px) {
+
+    .menu-toggle {
+        display: block;
+    }
+ 
+    .fa-bars {
+        color: var(--primary-color);
+    }
+ 
+    .fa-times {
+        display: none;
+    }
+ 
+     .nav-list {
+        background-color: #4c4c43;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform .5s;
+        z-index: 100;
+    }
+ 
+     .nav-list li:not(:last-child) {
+         margin-right: 0;
+     }
+ 
+     .nav-list li {
+         margin: 2.1875rem 0;
+     }
+ 
+     .menu-toggle.show .fa-bars {
+         display: none;
+     }
+ 
+     .menu-toggle.show .fa-times {
+         display: block;
+     }
+ 
+     .nav-list.show {
+         transform: translateY(0);
+     }
+ 
+     .navbar .nav-list a {
+         color: #e3ebf0;
+     }
+ 
+     .logo {
+         color: var(--primary-color) !important;
+     }
+ }

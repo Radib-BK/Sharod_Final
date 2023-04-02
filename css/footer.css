@@ -1,0 +1,42 @@
+footer {
+    background-image: linear-gradient(rgb(255, 253, 208, 0.95), rgba(80, 79, 64, 0.45));
+    padding: 5rem 0 10rem 0;
+}
+
+.footer-box {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-box .footer-text {
+    font-size: 1.80rem;
+    padding-bottom: 3rem;
+}
+
+.footer-box .footer-text:nth-of-type(1){
+    flex-basis: 30%;
+}
+
+.footer-box .footer-text:nth-of-type(1) p {
+    float: left;
+    padding: 1.5rem 0 0 3rem;
+    opacity: 0.65;
+}
+
+.footer-box .footer-text h4 {
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.footer-box .footer-text ul li {
+    opacity: 0.65;
+    padding: .5rem 0 0 0;
+}
+
+.footer-box .footer-text ul li:hover {
+    opacity: 1;
+}
