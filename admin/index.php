@@ -1,3 +1,7 @@
+<?php
+    include('../includes/connect.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,8 +29,8 @@
                 <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Categories</a></button>
                 <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">All Orders</a></button>
                 <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">All Payments</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">List of Users</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Logout</a></button>
+                <button><a href="index.php?list_users" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">List of Users</a></button>
+                <button><a href="admin_logout.php" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Logout</a></button>
             </div>
         </div>
     </div>
@@ -37,6 +41,12 @@
         }
         if(isset($_GET['insert_products'])){
             include('insert_product.php');
+        }
+        if(isset($_GET['list_users'])){
+            include('list_users.php');
+        }
+        if(isset($_GET['delete_user'])){
+            include('delete_user.php');
         }
         ?>
     </div>
