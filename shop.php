@@ -49,16 +49,23 @@ include('includes/connect.php');
 
 	<header class="secHead">
 		<div class="search-bar">
-			<input type="text" placeholder="Search products...">
-			<button id="srcbtn">Search</button>
+			<form class="form-control" method="POST" action="">
+				<input class="search_input" type="text" placeholder="Search products...">
+				<button type="submit">Search</button>
+			</form>
 		</div>
-		<select name="sort" id="sort">
-			<option value="default">Default sorting</option>
-			<option value="name-asc">Sort by name: A to Z</option>
-			<option value="name-desc">Sort by name: Z to A</option>
-			<option value="price-asc">Sort by price: Low to High</option>
-			<option value="price-desc">Sort by price: High to Low</option>
-		</select>
+		<div class="sort-bar">
+			<form class="form-control" method="POST" action="">
+				<select name="sort_by" id="sort_by">
+					<option value="product_id">Default sorting</option>
+					<option value="product_title ASC">Sort by name: A to Z</option>
+					<option value="product_title DESC">Sort by name: Z to A</option>
+					<option value="product_price ASC">Sort by price: Low to High</option>
+					<option value="product_price DESC">Sort by price: High to Low</option>
+				</select>
+				<button type="submit">Sort</button>
+			</form>
+		</div>
 	</header>
 	<main>
 		<div class="row">
@@ -82,7 +89,14 @@ include('includes/connect.php');
 				<div class="row px-2">
 					<!-- fetching products  -->
 					<?php
-					$select_query = "select * from `products`";
+					$sort_order = "product_id";
+
+					// Check if sort_by value is submitted
+					if (isset($_POST["sort_by"])) {
+						$sort_order = $_POST["sort_by"];
+					}
+
+					$select_query = "select * from `products` order by $sort_order";
 					$result_query = mysqli_query($con, $select_query);
 					//$row=mysqli_fetch_assoc($result_query);
 					//echo $row['product_title'];

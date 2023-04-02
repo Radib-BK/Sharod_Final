@@ -9,55 +9,11 @@
 }
 
 .search-bar {
-  width: 10rem;
   font-family: sans-serif;
-  left: 1rem;
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 2.5rem;
-  font-size: 16px;
-  justify-content:flex-start;
-}
-
-.search-bar input[type="text"] {
-  box-shadow: -8px 8px 12px 0 rgba(0, 0, 0, 0.3),
-    12px -12px 16px rgba(255, 255, 255, 0.397);
-  width: max-content;
-  height: 4rem;
-  border: #333;
-  border-radius: 2.5rem 0rem 0rem 2.5rem;
-  padding: 1rem;
-}
-
-.search-bar button {
-  height: 4rem;
-  width: max-content;
   border: none;
-  background-color: #333;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 0 2.5rem 2.5rem 0;
-  cursor: pointer;
-}
-.search-bar button:hover {
-  color: rgb(255, 209, 108);
-  background-color: rgb(0, 0, 0);
-}
-
-#sort {
-    font-size: 13px;
-  text-align: center;
-  height: 4rem;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  background-color: #ffffff;
-  box-shadow: -8px 8px 12px 0 rgba(0, 0, 0, 0.3),
-    12px -12px 16px rgba(255, 255, 255, 0.332);
-  background: linear-gradient();
-  padding: 1.2rem;
-  border-radius: 2.5rem;
-  border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+  width: 32rem;
 }
 
 main {
@@ -102,24 +58,54 @@ main {
   object-fit: contain;
 }
 
+.search_input{
+  width: 100%;
+  font-size: 1.5rem;
+  border: none;
+}
 
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.sort-bar {
+	display: flex;
+	align-items: center;
+  width: 32rem;
+}
 
-  .search-bar {
-    margin: 0 0 20px 0;
-  }
+.form-control {
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	background-color: #fff;
+	border-radius: 5rem;
+  box-shadow: -8px 8px 12px 0 rgba(0, 0, 0, 0.3),
+    12px -12px 16px rgba(255, 255, 255, 0.332);
+}
 
-  .search-bar input[type="text"] {
-    flex-grow: 2;
-    margin-right: 0;
-  }
+#sort_by {
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+	margin-right: 2rem;
+}
 
-  .sidenav {
-    margin-right: 0;
-    flex-basis: 100%;
-  }
+#sort_by option {
+	background-color: #f5f5f5;
+	color: #333;
+}
+
+button[type="submit"] {
+	background-color: #333;
+	border: none;
+	border-radius: 5rem;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.6rem;
+	padding: .5rem 2.6rem;
+}
+
+button[type="submit"]:hover {
+	color: rgb(255, 209, 108);
+  background-color: rgb(0, 0, 0);
 }
