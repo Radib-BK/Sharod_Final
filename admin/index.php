@@ -24,7 +24,7 @@
         <div class="col-md-12 bg-dark p-2">
             <div class="button text-center">
                 <button><a href="index.php?insert_products" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Insert Products</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Products</a></button>
+                <button><a href="index.php?list_products" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Products</a></button>
                 <button><a href="index.php?insert_categories" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Insert Categories</a></button>
                 <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Categories</a></button>
                 <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">All Orders</a></button>
@@ -45,8 +45,14 @@
         if(isset($_GET['list_users'])){
             include('list_users.php');
         }
+        if(isset($_GET['list_products'])){
+            include('list_products.php');
+        }
         if(isset($_GET['delete_user'])){
             include('delete_user.php');
+        }
+        if(isset($_GET['delete_product'])){
+            include('delete_product.php');
         }
         ?>
     </div>

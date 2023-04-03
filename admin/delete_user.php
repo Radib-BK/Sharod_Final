@@ -5,7 +5,7 @@
         $result_query=mysqli_query($con,$delete_query);
         if($result_query){
             echo "<script>alert('User Deleted')</script>";
-            echo "<script>window.open('./index.php','_self')</script>";
+            echo "<script>window.open('./index.php?list_users','_self')</script>";
         }
     }
 ?>
