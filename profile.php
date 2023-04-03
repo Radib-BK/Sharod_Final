@@ -27,6 +27,7 @@ $pass = $row_fetch['password'];
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -64,11 +65,22 @@ $pass = $row_fetch['password'];
                     <li data-target="#ordersSection">Orders</li>
                 </ul>
                 <input id="logout_btn" type="button" onclick="location.href='logout.php'" value="LOG OUT">
+                <form method="post" action="delete-account.php">
+                    <input id="delete_btn" type="button" onclick="confirmDelete()" value="DELETE ACCOUNT">
+                </form>
+                <script>
+                    function confirmDelete() {
+                        if (confirm('Are you sure you want to delete your account?')) {
+                            // User clicked OK
+                            window.location.href = "delete-account.php";
+                        }
+                    }
+                </script>
             </div>
             <div class="main">
                 <div class="section active" id="personalInformationSection">
                     <h1>Personal Information</h1>
-                    <form id="personalInformationForm" method="post" action="">
+                    <form class="form_ctrl" id="personalInformationForm" method="post" action="">
                         <label for="prof_usernameInput">Username :</label>
                         <input class="form-control" type="text" id="usernameInput" name="prof_username" value="<?php echo $user_name; ?>">
                         <label for="emailInput">Email :</label>
@@ -98,7 +110,7 @@ $pass = $row_fetch['password'];
                 </div>
                 <div class="section" id="changePasswordSection">
                     <h1>Change Password</h1>
-                    <form id="changePasswordForm" method="post" action="">
+                    <form class="form_ctrl" id="changePasswordForm" method="post" action="">
                         <label for="currentPasswordInput">Current Password:</label>
                         <input type="password" id="currentPasswordInput" name="currentPassword">
                         <label for="newPasswordInput">New Password:</label>

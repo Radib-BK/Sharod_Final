@@ -54,7 +54,7 @@
 }
 
 /* Define styles for forms and form elements */
-form {
+.form_ctrl {
   background: linear-gradient(#ffffff, rgba(252, 252, 252, 0.95));
   padding: 4rem 8rem;
   display: flex;
@@ -102,13 +102,29 @@ button {
   color: #000000;
   padding: 1rem 7rem;
   text-decoration:double;
-  margin: 4.4rem .2rem;
+  margin: 33rem 0rem 1rem 0rem;
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: bolder;
 }
 
 #logout_btn:hover{
+  color: red;
+}
+
+#delete_btn {
+  background-color: #000000d6;
+  border:#a0a0a0;
+  color: #ffa21f;
+  padding: 1rem 3.5rem;
+  text-decoration:double;
+  margin: 2rem 0rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#delete_btn:hover{
   color: red;
 }
 

@@ -33,7 +33,7 @@ session_start();
             <pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
             <ul class="nav-list">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="shop.php">Shop</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -70,7 +70,6 @@ session_start();
                         <div class="btn-layer"></div>
                         <input type="submit" value="Login" name="user_login">
                     </div>
-                    <div class="pass-link"><a href="#">Forgot password?</a></div>
                 </form>
                 <form action="#" method="post" class="signup">
                     <div class="field">

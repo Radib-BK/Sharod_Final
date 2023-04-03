@@ -11,4 +11,5 @@
 
 .navrow{
     padding-top: 5rem;
+    position: static;
 }

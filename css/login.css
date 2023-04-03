@@ -26,6 +26,7 @@ html {
   font-size: 10px;
   font-family: "Josefin Sans", sans-serif;
   min-width: 65rem;
+  overflow-x: hidden;
 }
 
 :root {

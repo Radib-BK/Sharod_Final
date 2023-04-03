@@ -26,7 +26,7 @@
                 <button><a href="index.php?insert_products" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Insert Products</a></button>
                 <button><a href="index.php?list_products" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Products</a></button>
                 <button><a href="index.php?insert_categories" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Insert Categories</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Categories</a></button>
+                <button><a href="index.php?list_categories" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Categories</a></button>
                 <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">All Orders</a></button>
                 <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">All Payments</a></button>
                 <button><a href="index.php?list_users" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">List of Users</a></button>
@@ -36,23 +36,29 @@
     </div>
     <div class="container my-5">
         <?php
-        if(isset($_GET['insert_categories'])){
-            include('insert_categories.php');
-        }
         if(isset($_GET['insert_products'])){
             include('insert_product.php');
-        }
-        if(isset($_GET['list_users'])){
-            include('list_users.php');
         }
         if(isset($_GET['list_products'])){
             include('list_products.php');
         }
-        if(isset($_GET['delete_user'])){
-            include('delete_user.php');
-        }
         if(isset($_GET['delete_product'])){
             include('delete_product.php');
+        }
+        if(isset($_GET['insert_categories'])){
+            include('insert_categories.php');
+        }
+        if(isset($_GET['list_categories'])){
+            include('list_categories.php');
+        }
+        if(isset($_GET['delete_category'])){
+            include('delete_category.php');
+        }
+        if(isset($_GET['list_users'])){
+            include('list_users.php');
+        }
+        if(isset($_GET['delete_user'])){
+            include('delete_user.php');
         }
         ?>
     </div>

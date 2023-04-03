@@ -1,6 +1,7 @@
 <?php
 include('includes/connect.php');
 include('./functions/common_funcs.php');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -31,16 +32,17 @@ include('./functions/common_funcs.php');
 				<li><a href="">Contact</a></li>
 			</ul>
 			<div class="nav-icon">
-				<?php
-				if (!isset($_SESSION['email'])) {
-					echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>";
-				} else {
-					echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>";
-				}
-				?>
-				<i class="fas"><a href="#wishlist">&#xf004;</a></i>
-				<i class="fas"><a href="#cart">&#xf07a;</a></i>
-			</div>
+                <?php
+                if(!isset($_SESSION['email'])){
+                    echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>";
+                }
+                else{
+                    echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>";
+                }
+                ?>
+                <i class="fas"><a href="#wishlist">&#xf004;</a></i>
+                <i class="fas"><a href="#cart">&#xf07a;</a></i>
+            </div>
 			<div class="menu-toggle">
 				<i class="fas fa-bars"></i>
 				<i class="fas fa-times"></i>
@@ -51,8 +53,8 @@ include('./functions/common_funcs.php');
 	<header class="secHead">
 		<div class="search-bar">
 			<form class="form-control" method="POST" action="">
-				<input class="search_input" type="text" placeholder="Search products...">
-				<button type="submit">Search</button>
+				<input class="search_input" type="search" placeholder="Search products..." name="search_data">
+				<input type="submit" value="Search" name="search_data_product">
 			</form>
 		</div>
 		<div class="sort-bar">
@@ -64,7 +66,7 @@ include('./functions/common_funcs.php');
 					<option value="product_price ASC">Sort by price: Low to High</option>
 					<option value="product_price DESC">Sort by price: High to Low</option>
 				</select>
-				<button type="submit">Sort</button>
+				<input type="submit" value="Sort">
 			</form>
 		</div>
 	</header>
