@@ -47,7 +47,7 @@ function getproducts()
         <img class='card-img-top' src='./admin/products_images/$product_image' alt='$product_title'>
         <div class='card-body'>
         <h3 class='card-title'>$product_title</h3>
-        <p class='card-text fs-5'>$product_description</p>
+        <p class='card-text fs-5' style='height: 8rem;'>$product_description</p>
         <p class='card-text fs-3'> Price : $product_price /=</p>
         <a href='#' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
         <a href='./product-pages/$product_title/$product_title.html' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
@@ -95,7 +95,7 @@ function getuniqueCategories()
         <img class='card-img-top' src='./admin/products_images/$product_image' alt='$product_title'>
         <div class='card-body'>
         <h3 class='card-title'>$product_title</h3>
-        <p class='card-text fs-5'>$product_description</p>
+        <p class='card-text fs-5' style='height: 8rem;'>$product_description</p>
         <p class='card-text fs-3'> Price : $product_price /=</p>
         <a href='#' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
         <a href='./product-pages/$product_title/$product_title.html' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
