@@ -27,6 +27,7 @@ $pass = $row_fetch['password'];
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -70,11 +71,21 @@ $pass = $row_fetch['password'];
                 </form>
                 <script>
                     function confirmDelete() {
-                        if (confirm('Are you sure you want to delete your account?')) {
+                        Swal.fire({
+                        title: 'Delete Your Account?',
+                        text: 'This Action Cannot Be Undone!',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonText: 'YES',
+                        cancelButtonText: 'Cancel',
+                        customClass: { popup: 'my-custom-popup-class', icon: 'my-custom-icon-class',  confirmButton: 'my-custom-button-class', cancelButton: 'my-custom-cancel-class'}
+                    }).then((result) => {
+                            if (result.isConfirmed) {
                             // User clicked OK
-                            window.location.href = "delete-account.php";
-                        }
-                    }
+                            window.location.href = "./delete-account.php";
+                            }
+                        })
+                }
                 </script>
             </div>
             <div class="main">
@@ -101,7 +112,6 @@ $pass = $row_fetch['password'];
                             $update_query = "update `user_table` set username='$up_username',user_address='$up_address',mobile='$up_phone' where user_id=$update_id";
                             $result_query_update = mysqli_query($con, $update_query);
                             if ($result_query_update) {
-                                echo "<script>alert('Data Updated Successfully')</script>";
                                 echo "<script>window.open('profile.php','_self')</script>";
                             }
                         }
@@ -221,6 +231,7 @@ $pass = $row_fetch['password'];
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
 </body>
 
 </html>

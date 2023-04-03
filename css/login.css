@@ -242,3 +242,70 @@ form .btn input[type="submit"] {
 form .btn:hover input[type="submit"] {
   color: #ff631a;
 }
+
+/* Custom popup class */
+.my-custom-popup-class {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  border: none;
+  padding: 4rem;
+  font-size: large;
+  box-shadow: 5px 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Custom icon class */
+.my-custom-icon-class {
+  color: #64dd17; /* green color */
+  font-size: 3rem;
+}
+
+/* Custom confirm button class */
+.my-custom-button-class {
+  background-color: #65f50b; /* green color */
+  color: #fff;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.my-custom-button-class:hover {
+  background-color: #4eaa0c; /* darker green color */
+  cursor: pointer;
+}
+
+/* Custom popup class */
+.custom-popup-class {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  border: none;
+  padding: 4rem;
+  font-size: large;
+  box-shadow: 5px 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Custom icon class */
+.custom-icon-class {
+  color: #ff1b1b; /* red color */
+  font-size: 3rem;
+}
+
+/* Custom confirm button class */
+.custom-button-class {
+  background-color: #ff0000; /* red color */
+  color: #fff;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-button-class:hover {
+  background-color: #ae0000; /* darker red color */
+  cursor: pointer;
+}
+

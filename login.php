@@ -13,6 +13,7 @@ session_start();
 
     <title>Login - SHAROD</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
@@ -136,6 +137,7 @@ session_start();
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
 </body>
 
 </html>
@@ -145,24 +147,59 @@ if (isset($_POST['user_login'])) {
     $user_email = $_POST['user_email'];
     $user_password = $_POST['user_password'];
 
-    if ($user_email == 'admin' and $user_password == 'admin') {
-        echo "<script>window.open('./admin/index.php','_self')</script>";
+    if ($user_email == 'admin' and $user_password == 'admin') 
+    {
+        echo "<script>
+        setTimeout(function(){
+        Swal.fire({
+            title: 'Welcome Admin!',
+            text: 'Login Successful.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            customClass: { popup: 'my-custom-popup-class', icon: 'my-custom-icon-class',  confirmButton: 'my-custom-button-class'}
+        }).then(function()
+        {
+            window.open('./admin/index.php', '_self');
+        });
+        }, 100);
+        </script>";
     } 
-    else {
+    else 
+    {
         $select_query = "Select * from `user_table` where email = '$user_email'";
         $result = mysqli_query($con, $select_query);
         $rows_count = mysqli_num_rows($result);
         $row_data = mysqli_fetch_assoc($result);
-        if ($rows_count > 0) {
+        $user=$row_data['username'];
+        if ($rows_count > 0) 
+        {
             $_SESSION['email'] = $user_email;
-            if (password_verify($user_password, $row_data['password'])) {
+            if (password_verify($user_password, $row_data['password']))
+            {
                 $_SESSION['email'] = $user_email;
-                echo "<script>window.open('profile.php','_self')</script>";
-            } else {
-                echo "<script>alert('Invalid Credentials')</script>";
+                echo "<script>
+                setTimeout(function(){
+                Swal.fire({
+                title: 'Welcome $user!',
+                text: 'Your Login is Successful.',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                customClass: { popup: 'my-custom-popup-class', icon: 'my-custom-icon-class',  confirmButton: 'my-custom-button-class'}
+                }).then(function()
+                {
+                window.open('profile.php', '_self');
+                });
+                }, 100);
+                </script>";
             }
-        } else {
-            echo "<script>alert('Invalid Credentials')</script>";
+            else 
+            {
+                echo "<script>Swal.fire({ title: 'Invalid Credentials!',text: 'Input Correct Email and Password to login.', icon: 'error',  confirmButtonText: 'OK',  customClass: {popup: 'custom-popup-class', icon: 'custom-icon-class', confirmButton: 'custom-button-class'}});</script>";
+            }
+        }
+        else 
+        {
+            echo "<script>Swal.fire({  title: 'Invalid Credentials!',  text: 'Input Correct Email and Password to login.',  icon: 'error',  confirmButtonText: 'OK',  customClass: {popup: 'custom-popup-class', icon: 'custom-icon-class', confirmButton: 'custom-button-class'}});</script>";
         }
     }
 }
@@ -186,12 +223,13 @@ if (isset($_POST['user_signup'])) {
     $rows_count = mysqli_num_rows($result);
     if ($rows_count > 0) {
         $_SESSION['email'] = $user_email;
-        echo "<script>alert('Email Already registered')</script>";
+        echo "<script>Swal.fire({  title: 'Try Another Email!',  text: 'Email Already Exists.',  icon: 'error',  confirmButtonText: 'OK',  customClass: {popup: 'custom-popup-class', icon: 'custom-icon-class', confirmButton: 'custom-button-class'}});</script>";
     } else if ($user_password != $conf_user_username) {
-        echo "<script>alert('Confirm password do not match')</script>";
+        echo "<script>Swal.fire({  title: 'Confirm Password Does Not Match!',  text: 'Input Same Password and Confirm Password',  icon: 'error',  confirmButtonText: 'OK',  customClass: {popup: 'custom-popup-class', icon: 'custom-icon-class', confirmButton: 'custom-button-class'}});</script>";
     } else {
         $insert_query = "insert into `user_table` (username,password,email,user_ip,user_address,mobile) values('$user_username','$hash_password','$user_email','$user_ip','$user_address','$user_phone')";
         $sql_execute = mysqli_query($con, $insert_query);
+        echo "<script>Swal.fire({title: 'Registration Successful!',text: 'Your Account Has Been Created.',icon: 'success',confirmButtonText: 'OK',customClass: {  popup: 'my-custom-popup-class',  icon: 'my-custom-icon-class',  confirmButton: 'my-custom-button-class'}});</script>";
     }
 }
 ?>
