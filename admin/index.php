@@ -45,6 +45,9 @@
         if(isset($_GET['delete_product'])){
             include('delete_product.php');
         }
+        if(isset($_GET['edit_product'])){
+            include('edit_product.php');
+        }
         if(isset($_GET['insert_categories'])){
             include('insert_categories.php');
         }
@@ -53,6 +56,9 @@
         }
         if(isset($_GET['delete_category'])){
             include('delete_category.php');
+        }
+        if(isset($_GET['edit_category'])){
+            include('edit_category.php');
         }
         if(isset($_GET['list_users'])){
             include('list_users.php');

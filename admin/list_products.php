@@ -43,3 +43,8 @@
             }
         ?>    
 </table>
+<style>
+    tbody tr:nth-child(even) {
+    background-color:aliceblue;
+}
+</style>
