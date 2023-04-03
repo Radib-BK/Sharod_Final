@@ -17,16 +17,23 @@ function getproducts()
     global $con;
     $sort_order = "product_id";
 
+
+
     if (!isset($_GET['category'])) {
         // Check if sort_by value is submitted
         if (isset($_POST["sort_by"])) {
             $sort_order = $_POST["sort_by"];
         }
 
-        $select_query = "select * from `products` order by $sort_order";
-        $result_query = mysqli_query($con, $select_query);
-        //$row=mysqli_fetch_assoc($result_query);
-        //echo $row['product_title'];
+        if (isset($_GET['search_data_product'])){
+            $search_data = $_GET['search_data'];
+            $select_query = "select * from `products` where product_keywords like '%$search_data%' order by $sort_order";
+            $result_query = mysqli_query($con, $select_query);
+        }
+        else{
+            $select_query = "select * from `products` order by $sort_order";
+            $result_query = mysqli_query($con, $select_query);
+        }
         while ($row = mysqli_fetch_assoc($result_query)) {
             $product_id = $row['product_id'];
             $product_title = $row['product_title'];

@@ -52,7 +52,7 @@ session_start();
 
 	<header class="secHead">
 		<div class="search-bar">
-			<form class="form-control" method="POST" action="">
+			<form class="form-control" method="GET" action="">
 				<input class="search_input" type="search" placeholder="Search products..." name="search_data">
 				<input type="submit" value="Search" name="search_data_product">
 			</form>
