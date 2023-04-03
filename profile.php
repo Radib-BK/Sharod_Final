@@ -72,21 +72,78 @@ $pass = $row_fetch['password'];
                 <script>
                     function confirmDelete() {
                         Swal.fire({
-                        title: 'Delete Your Account?',
-                        text: 'This Action Cannot Be Undone!',
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonText: 'YES',
-                        cancelButtonText: 'Cancel',
-                        customClass: { popup: 'my-custom-popup-class', icon: 'my-custom-icon-class',  confirmButton: 'my-custom-button-class', cancelButton: 'my-custom-cancel-class'}
-                    }).then((result) => {
+                            title: 'Delete Your Account?',
+                            text: 'This Action Cannot Be Undone!',
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonText: 'YES, DELETE',
+                            cancelButtonText: 'CANCEL',
+                            customClass: {
+                                popup: 'my-custom-popup-class',
+                                icon: 'my-custom-icon-class',
+                                confirmButton: 'my-custom-button-class',
+                                cancelButton: 'my-custom-cancel-class'
+                            }
+                        }).then((result) => {
                             if (result.isConfirmed) {
-                            // User clicked OK
-                            window.location.href = "./delete-account.php";
+                                // User clicked OK
+                                window.location.href = "./delete-account.php";
                             }
                         })
-                }
+                    }
                 </script>
+                <style>
+                    .my-custom-popup-class {
+                        background-color: #f1f1f1;
+                        border-radius: 10px;
+                        border: none;
+                        padding: 4rem;
+                        font-size: large;
+                        box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.3);
+                    }
+
+                    /* Custom icon class */
+                    .my-custom-icon-class {
+                        color: #64dd17;
+                        /* green color */
+                        font-size: 3rem;
+                    }
+
+                    /* Custom confirm button class */
+                    .my-custom-button-class {
+                        background-color: #f50b0b;
+                        color: #fff;
+                        border-radius: .5rem;
+                        padding: 1rem 2rem;
+                        font-size: 4rem;
+                        font-weight: bold;
+                        border: none;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    .my-custom-cancel-class {
+                        background-color: #65f50b;
+                        /* green color */
+                        color: #fff;
+                        border-radius: .5rem;
+                        padding: 1rem 2rem;
+                        font-size: 4rem;
+                        font-weight: bold;
+                        border: none;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    .my-custom-button-class:hover {
+                        background-color: #aa0c0c;
+                        cursor: pointer;
+                    }
+
+                    .my-custom-cancel-class:hover {
+                        background-color: #4eaa0c;
+                        /* darker green color */
+                        cursor: pointer;
+                    }
+                </style>
             </div>
             <div class="main">
                 <div class="section active" id="personalInformationSection">
