@@ -1,3 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+/* Add a background image to the container element */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+transition: .25s all ease;
+}
+
+@font-face {
+  font-family: "TheGwatmey";
+  src: url("../textfonts/TheGwathmey.woff") format("woff");
+}
+
+@font-face {
+  font-family: "EBGaramondItalic";
+  src: url("../textfonts/EBGaramond-Italic.woff") format("woff");
+}
+
+/*added*/
+@font-face {
+  font-family: "Karima";
+  src: url("../textfonts/Karima.ttf") format("truetype");
+}
+
+/*added*/
+@font-face {
+  font-family: "Display-Magazine";
+  src: url("../textfonts/Display-Magazine.ttf") format("truetype");
+}
+
+/*added*/
+@font-face {
+  font-family: "Magistral-Honesty";
+  src: url("../textfonts/Magistral-Honesty.ttf") format("truetype");
+}
+
+
+html {
+  font-size: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  min-width: 65rem;
+}
+
+:root {
+  --primary-color: #1d1d1d;        
+}
+
+.container,
+.small-container,
+.medium-container {
+  width: 100%;
+  max-width: 130rem;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.small-container {
+  max-width: 100rem;
+}
+
+.medium-container {
+  max-width: 120rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 body{
   overflow-x: hidden;
 }
@@ -9,6 +83,16 @@ body{
   background-color: #eee;
   padding-top: 8rem;
   font-family: sans-serif;
+}
+
+.cartHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  background-color: #eee;
+  padding-top: 9rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .search-bar {

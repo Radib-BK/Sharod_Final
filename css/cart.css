@@ -1,0 +1,13 @@
+.cartHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    background-color: #eee;
+    padding-top: 9rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    font-size:medium !important;
+}

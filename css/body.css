@@ -7,53 +7,29 @@
 
 @font-face {
     font-family: "TheGwatmey";
-    src: url('../textfonts/TheGwathmey.woff') format('woff');
+    src: url("../textfonts/TheGwathmey.woff") format("woff");
 }
 
 @font-face {
     font-family: "EBGaramondItalic";
-    src: url('../textfonts/EBGaramond-Italic.woff') format('woff');
+    src: url("../textfonts/EBGaramond-Italic.woff") format("woff");
 }
 
 /*added*/ @font-face {
     font-family: "Karima";
-    src: url('../textfonts/Karima.ttf') format('truetype');
+    src: url("../textfonts/Karima.ttf") format("truetype");
 }
 
 /*added*/ @font-face {
     font-family: "Display-Magazine";
-    src: url('../textfonts/Display-Magazine.ttf') format('truetype');
+    src: url("../textfonts/Display-Magazine.ttf") format("truetype");
 }
 
 /*added*/ @font-face {
     font-family: "Magistral-Honesty";
-    src: url('../textfonts/Magistral-Honesty.ttf') format('truetype');
+    src: url("../textfonts/Magistral-Honesty.ttf") format("truetype");
 }
 
-/*added*/ @font-face {
-    font-family: "Isdora";
-    src: url('../textfonts/isidora-regular.otf') format('opentype');
-}
-
-/*added*/ @font-face {
-    font-family: "Cinzel";
-    src: url('../textfonts/Cinzel-Regular.otf') format('opentype');
-}
-
-/*added*/ @font-face {
-    font-family: "Calendus";
-    src: url('../textfonts/Calendas_Plus.otf') format('opentype');
-}
-
-/*added*/ @font-face {
-    font-family: "Margot";
-    src: url('../textfonts/Margot-Regular.ttf') format('truetype');
-}
-
-/*added*/ @font-face {
-    font-family: "Kinfolk";
-    src: url('../textfonts/FontsFree-Net-Kinfolk_Reg.ttf') format('truetype');
-}
 
 html {
     font-size: 10px;

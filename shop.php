@@ -8,17 +8,18 @@ session_start();
 <html>
 
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SHAROD - Shop</title>
 
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/shop.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="css/body.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
-	<script src="app.js" defer></script>
-	<script src="shop.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@ session_start();
 		<div class="navbar">
 			<pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
 			<ul class="nav-list">
-				<li class=""><a href="index.php">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="shop.php">Shop</a></li>
 				<li><a href="">About</a></li>
 				<li><a href="">Contact</a></li>
