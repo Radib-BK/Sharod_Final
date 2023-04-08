@@ -49,7 +49,7 @@ function getproducts()
         <h3 class='card-title'>$product_title</h3>
         <p class='card-text fs-5' style='height: 8rem;'>$product_description</p>
         <p class='card-text fs-3'> Price : $product_price /=</p>
-        <a href='#' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
+        <a href='shop.php?add_to_cart=$product_id' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
         <a href='./product-pages/$product_title/$product_title.html' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
         </div>
         </div>
@@ -97,7 +97,7 @@ function getuniqueCategories()
         <h3 class='card-title'>$product_title</h3>
         <p class='card-text fs-5' style='height: 8rem;'>$product_description</p>
         <p class='card-text fs-3'> Price : $product_price /=</p>
-        <a href='#' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
+        <a href='shop.php?add_to_cart=$product_id' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
         <a href='./product-pages/$product_title/$product_title.html' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
         </div>
         </div>
@@ -106,3 +106,73 @@ function getuniqueCategories()
         }
     }
 }
+
+//cart function
+function cart(){
+    if(isset($_GET['add_to_cart'])){
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Login First To Add to Cart')</script>";
+            echo "<script>window.open('shop.php','_self')</script>";
+        }
+        else{
+            global $con;
+            $u_email=$_SESSION['email'];
+            $get_product_id=$_GET['add_to_cart'];
+            $select_query="select * from `cart_details` where email = '$u_email' and product_id = $get_product_id";
+            $result_query = mysqli_query($con,$select_query);
+            $num_of_rows = mysqli_num_rows($result_query);
+            if ($num_of_rows > 0) {
+                echo "<script>alert('Item Already Added in Cart')</script>";
+                echo "<script>window.open('shop.php','_self')</script>";
+            }
+            else{
+                $insert_query="insert into `cart_details` (product_id,email,quantity) values ($get_product_id,'$u_email',0)";
+                $result_query = mysqli_query($con,$insert_query);
+                echo "<script>alert('Item is Added to Cart')</script>";
+                echo "<script>window.open('shop.php','_self')</script>";
+            }
+        }
+    }
+}
+
+function cart_item(){
+    if(isset($_GET['add_to_cart'])){
+            global $con;
+            $u_email=$_SESSION['email'];
+            $select_query="select * from `cart_details` where email = '$u_email'";
+            $result_query = mysqli_query($con,$select_query);
+            $cart_items = mysqli_num_rows($result_query);
+            
+    }
+    else {
+        global $con;
+            $u_email=$_SESSION['email'];
+            $select_query="select * from `cart_details` where email = '$u_email'";
+            $result_query = mysqli_query($con,$select_query);
+            $cart_items = mysqli_num_rows($result_query);
+    }
+    return $cart_items;
+}
+
+function total_cart_prices(){
+    global $con;
+    $u_email=$_SESSION['email'];
+    $total = 0;
+    $cart_query="select * from `cart_details` where email = '$u_email'";
+    $result = mysqli_query($con,$cart_query);
+    while($row=mysqli_fetch_array($result)){
+        $product_id = $row['product_id'];
+        $select_products = "select * from `products` where product_id = $product_id";
+        $result_products = mysqli_query($con,$select_products);
+        while($row_product_price = mysqli_fetch_array($result_products)){
+            $product_price = array($row_product_price['product_price']);
+            $product_values = array_sum($product_price);
+            $total+=$product_values;
+        }
+    }
+    return $total;
+}
+
+
+
+?>

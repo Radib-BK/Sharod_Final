@@ -8,7 +8,10 @@ session_start();
 <html>
 
 <head>
-	<title>SHAROD - Shop</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SHAROD - Cart</title>
 
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -33,21 +36,10 @@ session_start();
 			</ul>
 			<div class="nav-icon">
                 <?php
-                if(!isset($_SESSION['email'])){
-                    echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
-					<i class='fas'><a href='#cart'>&#xf07a;</a></i>";
-					
-                }
-                else{
+                
                     echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
-					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>"; 
-					if(cart_item() > 0){
-					echo cart_item();
-					} 
-					echo"</sup>";
-                }
+					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>"
+
                 ?>
             </div>
 			<div class="menu-toggle">
