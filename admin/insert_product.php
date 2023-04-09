@@ -32,7 +32,7 @@
     </div>
     <div class="form-outline mb-4 w-50 m-auto">
         <label for="product_description"> Product Description : </label>
-        <input type="text" name="product_description" id="product_description" class="form-control" placeholder="Enter Product Description" autocomplete="off" required>
+        <input type="text" name="product_description" id="product_description" class="form-control" placeholder="Enter Product Description" autocomplete="off" maxlength="50" required>
     </div>
     <div class="form-outline mb-4 w-50 m-auto">
         <label for="product_keywords"> Product Keywords : </label>
