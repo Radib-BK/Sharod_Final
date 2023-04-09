@@ -130,13 +130,12 @@ function cart(){
             $result_query = mysqli_query($con,$select_query);
             $num_of_rows = mysqli_num_rows($result_query);
             if ($num_of_rows > 0) {
-                echo "<script>alert('Item Already Added in Cart')</script>";
+                echo "<script>alert('Item Already Exists in Cart')</script>";
                 echo "<script>window.open('shop.php','_self')</script>";
             }
             else{
                 $insert_query="insert into `cart_details` (product_id,email,quantity) values ($get_product_id,'$u_email',1)";
                 $result_query = mysqli_query($con,$insert_query);
-                echo "<script>alert('Item is Added to Cart')</script>";
                 echo "<script>window.open('shop.php','_self')</script>";
             }
         }
