@@ -21,16 +21,16 @@
         <h2 class="text-center">MANAGE PRODUCTS</h2>
     </div>
     <div class="row navrow">
-        <div class="col-md-12 bg-dark p-2">
+        <div class="col-md-12 bg-dark p-3">
             <div class="button text-center">
-                <button><a href="index.php?insert_products" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Insert Products</a></button>
-                <button><a href="index.php?list_products" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Products</a></button>
-                <button><a href="index.php?insert_categories" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Insert Categories</a></button>
-                <button><a href="index.php?list_categories" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">View Categories</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">All Orders</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">All Payments</a></button>
-                <button><a href="index.php?list_users" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">List of Users</a></button>
-                <button><a href="admin_logout.php" class="nav-link text-dark bg-light p-1 my-1 mx-2 fs-5">Logout</a></button>
+                <button><a href="index.php?insert_products" class="nav-link text-dark bg-light p-2 mx-2 fs-5">Insert Products</a></button>
+                <button><a href="index.php?list_products" class="nav-link text-dark bg-light p-2 mx-2 fs-5">View Products</a></button>
+                <button><a href="index.php?insert_categories" class="nav-link text-dark bg-light p-2 mx-2 fs-5">Insert Categories</a></button>
+                <button><a href="index.php?list_categories" class="nav-link text-dark bg-light p-2 mx-2 fs-5">View Categories</a></button>
+                <button><a href="" class="nav-link text-dark bg-light p-2 mx-2 fs-5">All Orders</a></button>
+                <button><a href="" class="nav-link text-dark bg-light p-2 mx-2 fs-5">All Payments</a></button>
+                <button><a href="index.php?list_users" class="nav-link text-dark bg-light p-2 mx-2 fs-5">List of Users</a></button>
+                <button><a href="admin_logout.php" class="nav-link text-dark bg-light p-2 mx-2 fs-5">Logout</a></button>
             </div>
         </div>
     </div>
@@ -73,5 +73,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
+
+<style>
+    button:hover{
+        background-color:antiquewhite;
+    }
+</style>
 
 </html>
