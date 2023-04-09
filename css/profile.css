@@ -142,7 +142,7 @@ table {
 th,
 td {
   padding: 1rem;
-  text-align: left;
+  text-align: center;
   border-bottom: 0.2rem solid #4b4b4b;
 }
 
@@ -279,7 +279,7 @@ a {
 }
 
 .main {
-  margin-top: 7.2rem;
+  margin-top: 7.3rem;
 }
 .main button {
   font-size: 15px;

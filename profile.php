@@ -74,7 +74,8 @@ $pass = $row_fetch['password'];
                 <ul>
                     <li class="active" data-target="#personalInformationSection">Personal Information</li>
                     <li data-target="#changePasswordSection">Change Password</li>
-                    <li data-target="#ordersSection">Orders</li>
+                    <li data-target="#ordersSection">Order History</li>
+                    <li data-target="#pendingOrdersSection">Pending Orders</li>
                 </ul>
                 <input id="logout_btn" type="button" onclick="location.href='logout.php'" value="LOG OUT">
                 <form method="post" action="delete-account.php">
@@ -225,41 +226,16 @@ $pass = $row_fetch['password'];
                     </form>
                 </div>
                 <div class="section" id="ordersSection">
-                    <h1>Orders</h1>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Order ID</th>
-                                <th>Date</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>001</td>
-                                <td>2022-01-01</td>
-                                <td>Chair</td>
-                                <td>10000</td>
-                                <td>Delivered</td>
-                            </tr>
-                            <tr>
-                                <td>002</td>
-                                <td>2022-02-15</td>
-                                <td>Table</td>
-                                <td>20000</td>
-                                <td>In Progress</td>
-                            </tr>
-                            <tr>
-                                <td>003</td>
-                                <td>2022-03-25</td>
-                                <td>Sofa</td>
-                                <td>50000</td>
-                                <td>Cancelled</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h1>Order History</h1>
+                    <?php
+                        get_order_details();
+                    ?>
+                </div>
+                <div class="section" id="pendingOrdersSection">
+                    <h1>Pending Orders</h1>
+                    <?php
+                        get_pending_order_details();
+                    ?>
                 </div>
             </div>
         </div>

@@ -198,6 +198,109 @@ function total_cart_prices_2(){
     return $total;
 }
 
+function get_pending_order_details(){
+    global $con;
+    $user_email = $_SESSION['email'];
+    $get_details = "select * from `user_table` where email = '$user_email'";
+    $result = mysqli_query($con,$get_details);
+    $row_query = mysqli_fetch_array($result);
+    $user_id=$row_query['User_id'];
+    $get_orders="select * from `user_orders` where user_id = '$user_id' and order_status = 'pending'";
+    $result_orders=mysqli_query($con,$get_orders);
+    $row_count = mysqli_num_rows($result_orders);
 
+    if($row_count == 0){
+        echo "<h1 style='font-size: 48px; text-align: center; color: green; font-weight: bold; margin-top: 20rem'>YOU HAVE NO PENDING ORDERS</h1>";
+    }
+    else
+    {
+        echo "<table>
+        <thead>
+            <tr>
+            <th>Order ID</th>
+            <th>Invoice No.</th>
+            <th>Order Date & Time</th>
+            <th>No. of Products</th>
+            <th>Total Bill</th>
+            <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>";
+
+        while($row= mysqli_fetch_array($result_orders)){
+            $order_id = $row['order_id'];
+            $invoice = $row['invoice_number'];
+            $date = $row['order_date'];
+            $quantity = $row['quantity'];
+            $total = $row['total_amount'];
+            $status = $row['order_status'];
+
+            echo "<tr>
+            <td>$order_id</td>
+            <td>$invoice</td>
+            <td>$date</td>
+            <td>$quantity</td>
+            <td>$total</td>
+            <td>$status</td>
+        </tr>";
+
+        }
+        echo "</tbody>
+        </table>";
+    }
+}
+
+function get_order_details(){
+    global $con;
+    $user_email = $_SESSION['email'];
+    $get_details = "select * from `user_table` where email = '$user_email'";
+    $result = mysqli_query($con,$get_details);
+    $row_query = mysqli_fetch_array($result);
+    $user_id=$row_query['User_id'];
+    $get_orders="select * from `user_orders` where user_id = '$user_id' and order_status = 'delivered'";
+    $result_orders=mysqli_query($con,$get_orders);
+    $row_count = mysqli_num_rows($result_orders);
+
+    if($row_count == 0){
+        echo "<h1 style='font-size: 48px; text-align: center; color: red; font-weight: bold; margin-top: 20rem'>YOU HAVE NO PREVIOUS ORDERS</h1>";
+
+    }
+    else
+    {
+        echo "<table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Delivery Date & Time</th>
+                <th>Invoice No.</th>
+                <th>No. of Products</th>
+                <th>Total Bill</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>";
+
+        while($row= mysqli_fetch_array($result_orders)){
+            $order_id = $row['order_id'];
+            $invoice = $row['invoice_number'];
+            $deli_date = $row['delivery_date'];
+            $quantity = $row['quantity'];
+            $total = $row['total_amount'];
+            $status = $row['order_status'];
+
+            echo "<tr>
+            <td>$order_id</td>
+            <td>$deli_date</td>
+            <td>$invoice</td>
+            <td>$quantity</td>
+            <td>$total</td>
+            <td>$status</td>
+        </tr>";
+
+        }
+        echo "</tbody>
+        </table>";
+    }
+}
 
 ?>

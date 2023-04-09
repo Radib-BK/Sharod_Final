@@ -27,8 +27,7 @@
                 <button><a href="index.php?list_products" class="nav-link text-dark bg-light p-2 mx-2 fs-5">View Products</a></button>
                 <button><a href="index.php?insert_categories" class="nav-link text-dark bg-light p-2 mx-2 fs-5">Insert Categories</a></button>
                 <button><a href="index.php?list_categories" class="nav-link text-dark bg-light p-2 mx-2 fs-5">View Categories</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-2 mx-2 fs-5">All Orders</a></button>
-                <button><a href="" class="nav-link text-dark bg-light p-2 mx-2 fs-5">All Payments</a></button>
+                <button><a href="index.php?list_orders" class="nav-link text-dark bg-light p-2 mx-2 fs-5">Pending Orders</a></button>
                 <button><a href="index.php?list_users" class="nav-link text-dark bg-light p-2 mx-2 fs-5">List of Users</a></button>
                 <button><a href="admin_logout.php" class="nav-link text-dark bg-light p-2 mx-2 fs-5">Logout</a></button>
             </div>
@@ -41,6 +40,12 @@
         }
         if(isset($_GET['list_products'])){
             include('list_products.php');
+        }
+        if(isset($_GET['list_orders'])){
+            include('list_orders.php');
+        }
+        if(isset($_GET['confirm_payment'])){
+            include('confirm_order.php');
         }
         if(isset($_GET['delete_product'])){
             include('delete_product.php');

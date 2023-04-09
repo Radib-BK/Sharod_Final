@@ -77,6 +77,13 @@ session_start();
 </head>
 
 <body>
+    <?php
+        $user_email = $_SESSION['email'];
+        $get_user="select * from `user_table` where email = '$user_email'";
+        $result_qry=mysqli_query($con,$get_user);
+        $row = mysqli_fetch_array($result_qry);
+        $id=$row['User_id'];
+    ?>
     <header>
         <div class="navbar">
             <pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
@@ -123,7 +130,7 @@ session_start();
                     <button id="nagad_button"></button>
                 </td>
                 <td>
-                    <button id="cod_button"></button>
+                    <button onclick="location.href = 'order.php?user_id=<?php echo $id ?>'" id="cod_button"></button>
                 </td>
             </tr>
         </table>
