@@ -11,7 +11,7 @@ if (isset($_GET['edit_category'])) {
 ?>
 
 <h2 class="text-center my-3">Edit Category</h2>
-<form action="" method="post" class="mb-2">
+<form action="" method="post" class="shadow w-50 mx-auto mb-2">
     <div class="input-group w-90 mb-2">
         <span class="input-group-text bg-light" id="basic-addon1"><i class="fa-solid fa-receipt"> </i></span>
         <input value="<?php echo $category_title ?>" type="text" class="form-control" name="category_title" placeholder="Category Name" aria-label="Category" aria-describedby="basic-addon1" required>

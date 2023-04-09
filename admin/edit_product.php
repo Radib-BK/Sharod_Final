@@ -23,7 +23,7 @@
 ?>
 
 <h2 class="text-center my-3">Edit Products</h2>
-<form action="" method="post" class="mb-2" enctype="multipart/form-data">
+<form action="" method="post" class="shadow w-75 mx-auto mb-2" enctype="multipart/form-data">
     <div class="form-outline mb-4 w-50 m-auto">
         <label for="product_title"> Product Title : </label>
         <input value="<?php echo $product_title ?>" type="text" name="product_title" id="product_title" class="form-control" placeholder="Enter Product Title" autocomplete="off" required>

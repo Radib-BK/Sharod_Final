@@ -25,7 +25,7 @@
 ?>
 
 <h2 class="text-center my-3">Insert Products</h2>
-<form action="" method="post" class="mb-2" enctype="multipart/form-data">
+<form action="" method="post" class="shadow w-75 mx-auto mb-2" enctype="multipart/form-data">
     <div class="form-outline mb-4 w-50 m-auto">
         <label for="product_title"> Product Title : </label>
         <input type="text" name="product_title" id="product_title" class="form-control" placeholder="Enter Product Title" autocomplete="off" required>
@@ -47,7 +47,9 @@
             while($row=mysqli_fetch_assoc($result_query)){
                 $category_title=$row['category_title'];
                 $category_id=$row['category_id'];
-                echo "<option value='$category_id'>$category_title</option>";
+                if ($category_id != 1) {
+                    echo "<option value='$category_id'>$category_title</option>";
+                }
             }
             ?>
             

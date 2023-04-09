@@ -26,7 +26,7 @@ if (isset($_POST['insert_cat'])) {
 
 
 <h2 class="text-center my-3">Insert Categories</h2>
-<form action="" method="post" class="mb-2">
+<form action="" method="post" class="shadow w-50 mx-auto mb-2">
     <div class="input-group w-90 mb-2">
         <span class="input-group-text bg-light" id="basic-addon1"><i class="fa-solid fa-receipt"> </i></span>
         <input type="text" class="form-control" name="cat_title" placeholder="Category Name" aria-label="Category" aria-describedby="basic-addon1">
