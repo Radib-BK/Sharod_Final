@@ -1,5 +1,4 @@
 <?php
-include('./includes/connect.php');
 function getIPAddress()
 {
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -178,6 +177,25 @@ function total_cart_prices(){
         $total+=$product_values;
     }
     echo $total;
+}
+
+function total_cart_prices_2(){
+    global $con;
+    $u_email=$_SESSION['email'];
+    $total = 0;
+    $cart_query="select * from `cart_details` where email = '$u_email'";
+    $result = mysqli_query($con,$cart_query);
+    while($row=mysqli_fetch_array($result)){
+        $product_id = $row['product_id'];
+        $quantity = $row['quantity'];
+        $select_products = "select * from `products` where product_id = $product_id";
+        $result_products = mysqli_query($con,$select_products);
+        $row_product_price = mysqli_fetch_array($result_products);
+        $product_price = $row_product_price['product_price'];
+        $product_values = $product_price * $quantity;
+        $total+=$product_values;
+    }
+    return $total;
 }
 
 

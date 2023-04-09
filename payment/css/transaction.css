@@ -1,0 +1,45 @@
+html {
+    font-size: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    min-width: 65rem;
+}
+
+.transaction-section {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.transaction-section button {
+    display: block;
+    position: relative;
+    width: 25rem;
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: rgba(149, 157, 165, 0.5) 0 0.5rem 1.5rem;
+    transition: all 0.4s;
+    border-width: 0rem;
+    border-radius: 5rem;
+    margin: 2rem;
+}
+
+.transaction-section button:hover {
+    box-shadow: #5b5b5b 0 0.5rem 1.5rem;
+}
+
+.transaction-section button:nth-of-type(1) {
+    background-image: url("../images/bKash.png");
+}
+
+.transaction-section button:nth-of-type(2) {
+    background-image: url("../images/nagad.png");
+}
+
+.transaction-section button:nth-of-type(3) {
+    background-image: url("../images/cod.png");
+}

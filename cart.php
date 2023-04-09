@@ -140,7 +140,7 @@ session_start();
                 <a href="./shop.php"><input type="button" class="fs-2 btn btn-outline-primary bg-gradient btn-dark rounded-pill shadow mx-3 px-5 border-1 border-dark text-light" name="Continue_Shopping" value="Continue Shopping"></a>
                 <?php
                 if($result_count > 0){
-                    echo "<a href='./shop.php'><input type='button' class='fs-2 btn btn-outline-info bg-gradient btn-dark rounded-pill shadow mx-3 px-5 border-1 border-dark' name='Checkout' value='Checkout'></a>";
+                    echo "<a href='./checkout.php'><input type='button' class='fs-2 btn btn-outline-info bg-gradient btn-dark rounded-pill shadow mx-3 px-5 border-1 border-dark' name='Checkout' value='Checkout'></a>";
                 }
                 ?>
             </div>
