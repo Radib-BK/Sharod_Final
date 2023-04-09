@@ -1,5 +1,5 @@
 <h2 class="text-center my-3">List of Users</h2>
-<table class="table table-bordered mt-2">
+<table class="table table-bordered mx-auto shadow mt-2">
     <thead class="bg-dark text-light text-center">
         <?php
             $get_users="select * from `user_table`";
@@ -45,4 +45,8 @@
     tbody tr:nth-child(even) {
     background-color:aliceblue;
 }
+td {
+    text-align: center;
+    vertical-align: middle;
+    }
 </style>

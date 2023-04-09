@@ -1,5 +1,5 @@
 <h2 class="text-center my-3">Category List</h2>
-<table class="table table-bordered mt-2">
+<table class="table table-bordered mt-2 w-75 shadow mx-auto">
     <thead class="bg-dark text-light text-center">
         <?php
             $get_categories="select * from `categories`";
@@ -40,4 +40,8 @@
     tbody tr:nth-child(even) {
     background-color:aliceblue;
 }
+td {
+    text-align: center;
+    vertical-align: middle;
+    }
 </style>

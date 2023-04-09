@@ -1,5 +1,5 @@
 <h2 class="text-center my-3">List of Products</h2>
-<table class="table table-bordered mt-2">
+<table class="table table-bordered shadow mt-2">
     <thead class="bg-dark text-light text-center">
         <?php
             $get_products="select * from `products`";
