@@ -11,7 +11,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHAROD - Cart</title>
+    <title>Cart - SHAROD</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -37,7 +37,7 @@ session_start();
                 <?php
                 if (!isset($_SESSION['email'])) {
                     echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#cart'>&#xf07a;</a></i>";
+					<i class='fas'><a href='login.php'>&#xf07a;</a></i>";
                 } else {
                     echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
 					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
@@ -76,7 +76,6 @@ session_start();
                                 <th>Image</th>
                                 <th>Quantity</th>
                                 <th>Total price</th>
-                                <th>Remove</th>
                                 <th colspan='2'>Operation</th>
                                 </tr>
                                 </thead>
@@ -107,7 +106,6 @@ session_start();
                                             <input type="number" name="qty" class="form-input w-50 px-3" style="text-align:center" min="1" value="<?php echo $quantities ?>">
                                     </td>
                                     <td><?php echo "$quantities x $price_table = $product_values" ?></td>
-                                    <td><input type='checkbox'></td>
                                     <td>
                                         <input type="submit" value="Update" name="update_cart" class="fs-5 btn btn-outline-light btn-dark rounded-pill shadow px-4 my-5 mx-2 border-3 border-success">
                                         <input type="submit" value="Remove" name="remove_cart" class="fs-5 btn btn-outline-light btn-dark rounded-pill shadow px-4 my-5 mx-2 border-3 border-danger">

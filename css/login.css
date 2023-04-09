@@ -218,7 +218,7 @@ form .btn .btn-layer {
   width: 100%;
   position: absolute;
   align-self: center;
-  background-color: #333;
+  background-color: #000000d7;
   border-radius: 2.5rem;
   transition: all 0.4s ease;
 }
@@ -231,7 +231,7 @@ form .btn input[type="submit"] {
   background: none;
   border: none;
   border-radius: 2.5rem;
-  color: rgb(255, 253, 208, 0.95);
+  color: rgb(13, 255, 0);
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 500;

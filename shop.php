@@ -11,7 +11,7 @@ session_start();
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SHAROD - Shop</title>
+	<title>Shop page - SHAROD</title>
 
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -36,7 +36,7 @@ session_start();
                 <?php
                 if(!isset($_SESSION['email'])){
                     echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#cart'>&#xf07a;</a></i>";
+					<i class='fas'><a href='login.php'>&#xf07a;</a></i>";
 					
                 }
                 else{

@@ -38,7 +38,7 @@ session_start();
             <?php
                 if (!isset($_SESSION['email'])) {
                     echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#cart'>&#xf07a;</a></i>";
+					<i class='fas'><a href='login.php'>&#xf07a;</a></i>";
                 } else {
                     echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
 					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
