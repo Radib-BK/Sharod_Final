@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'karima';
+    src: url(fonts/FontsFree-Net-Kinfolk_Reg.ttf) format(truetype);
+  }
+  @font-face {
+    font-family: 'disp';
+    src: url(fonts/Display-Magazine.ttf) format(truetype);
+  }
+  @font-face {
+    font-family: 'mag';
+    src: url(fonts/Magistral-Honesty.ttf) format(truetype);
+  }
+  
+
+body {
+    background-color: white;
+	width: 100%;
+	margin: 0 auto;
+    font-family: "karima", sans-serif;
+}
+
+.blog{
+      font-size:4em;
+
+      line-height: 1.9em;
+      margin-left:40px;
+      color:white;
+}
+
+header{
+      width:100%;
+      height:80px;
+      background-color:#000000;
+      position:fixed;
+      top:0;
+      z-index:2;  
+}
+
+a{
+   text-decoration:none;
+      color:rgb(9, 9, 8);
+}
+
+img{
+      max-width:100%;
+}
+.totel{
+      width: 90%;
+      margin-left:5%;
+}
+
+.eerste{
+          margin-left: 25px;
+          position:absolute;
+          top:32px;
+          right:40px;
+          font-family: "karima", sans-serif;
+          color: black;
+          font-size:1em;
+          font-weight:200;
+          margin-top:0px;
+          text-align:center; 
+}
+
+.menu{ 
+      color:black;
+      text-decoration:none;
+      border: 1px solid rgb(170, 249, 189);
+      padding:10px;
+}
+
+.menu:hover {
+    border: 1px solid #EA3F4C;  
+    background-color:rgb(157, 250, 182);
+    color: #F28F3B;
+}
+
+main {
+	background: white;
+	width: 80%;
+	height: auto;
+	margin: 120px 0 20px 0;
+	float: left;
+    padding-top: 10px;
+}
+
+article {
+    margin-bottom: 10px;  
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 1px solid #c5f7d0;
+    padding: .2em 0;
+}
+
+.erste{
+      /* background-color: white; */
+      width:34%;
+      height:250px;
+      margin:4px 16px 12px;
+      float:left; 
+      object-fit: contain;
+}
+
+.erste img {
+      object-fit: contain;
+}
+
+.kader{
+      width:60%;
+      height:250px;
+      margin:0px 20px 0 0px;
+      float: right; 
+      letter-spacing: 0.1em;
+}
+
+.titel{
+      font-size:2.6em;
+      line-height: 1.5em; 
+}
+ 
+.l1, .l2,.l3{
+      display:inline-block;
+      font-size:1.1em;
+      font-family: "karima", sans-serif;
+      line-height: 1em; 
+}
+
+.l2,.l3 {
+       margin-left:15px;
+}
+
+.more-link{
+      margin-top:15px;
+}
+
+aside {
+	background: white;
+	width: 18%;
+	height: auto;
+	margin: 120px 0 20px 0;
+	float: right;
+}
+
+.erstesaid{
+    background: url("images/faq.png");
+	width:80%;
+      height:250px;
+      margin:21px;
+}
+
+.kadersaid{
+      width:80%;
+      margin:27px;
+}
+
+.ques {
+      color: #26b03d;
+      display:inline-block;
+      font-size:1.8em;
+      font-family:helvetica neue;
+      line-height: 1.3em; 
+}
+.ans {
+    color: #000401;
+    display:inline-block;
+    font-size:1.5em;
+    font-family:helvetica neue;
+    line-height: 1.3em; 
+}
+.titelsaid{
+      font-size:2em;
+      line-height: 1.5em;
+}
