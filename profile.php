@@ -46,8 +46,20 @@ $pass = $row_fetch['password'];
                 <li><a href="">Contact</a></li>
             </ul>
             <div class="nav-icon">
-                <i class="fas"><a href="#wishlist">&#xf004;</a></i>
-                <i class="fas"><a href="#cart">&#xf07a;</a></i>
+            <?php
+                if (!isset($_SESSION['email'])) {
+                    echo "
+					<i class='fas'><a href='#cart'>&#xf07a;</a></i>";
+                } else {
+                    echo "
+					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
+					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>";
+                    if (cart_item() > 0) {
+                        echo cart_item();
+                    }
+                    echo "</sup>";
+                }
+                ?>
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>

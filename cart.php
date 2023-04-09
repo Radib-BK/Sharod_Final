@@ -37,7 +37,6 @@ session_start();
                 <?php
                 if (!isset($_SESSION['email'])) {
                     echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
 					<i class='fas'><a href='#cart'>&#xf07a;</a></i>";
                 } else {
                     echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
@@ -141,7 +140,11 @@ session_start();
             <h3 class="px-3 mt-5 fs-2 text-center">Subtotal : <strong class="text-danger fs-1"> <?php total_cart_prices(); ?> Taka</strong></h3>
             <div class="d-flex justify-content-center p-5 my-2">
                 <a href="./shop.php"><input type="button" class="fs-2 btn btn-outline-primary bg-gradient btn-dark rounded-pill shadow mx-3 px-5 border-1 border-dark text-light" name="Continue_Shopping" value="Continue Shopping"></a>
-                <a href="./shop.php"><input type="button" class="fs-2 btn btn-outline-info bg-gradient btn-dark rounded-pill shadow mx-3 px-5 border-1 border-dark" name="Checkout" value="Checkout"></a>
+                <?php
+                if($result_count > 0){
+                    echo "<a href='./shop.php'><input type='button' class='fs-2 btn btn-outline-info bg-gradient btn-dark rounded-pill shadow mx-3 px-5 border-1 border-dark' name='Checkout' value='Checkout'></a>";
+                }
+                ?>
             </div>
             </form>
             </div>

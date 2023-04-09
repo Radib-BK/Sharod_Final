@@ -35,16 +35,20 @@ session_start();
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-icon">
-                <?php
-                if(!isset($_SESSION['email'])){
-                    echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>";
+            <?php
+                if (!isset($_SESSION['email'])) {
+                    echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
+					<i class='fas'><a href='#cart'>&#xf07a;</a></i>";
+                } else {
+                    echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
+					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
+					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>";
+                    if (cart_item() > 0) {
+                        echo cart_item();
+                    }
+                    echo "</sup>";
                 }
-                else{
-                    echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>";
-                }
-                ?>
-                <i class="fas"><a href="#wishlist">&#xf004;</a></i>
-                <i class="fas"><a href="#cart">&#xf07a;</a></i>
+            ?>
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
