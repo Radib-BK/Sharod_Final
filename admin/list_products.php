@@ -46,5 +46,10 @@
 <style>
     tbody tr:nth-child(even) {
     background-color:aliceblue;
-}
+    }
+
+    td {
+    text-align: center;
+    vertical-align: middle;
+    }
 </style>
