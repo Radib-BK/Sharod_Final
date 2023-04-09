@@ -47,6 +47,9 @@
     tbody tr:nth-child(even) {
     background-color:aliceblue;
     }
+    tbody tr:nth-child(odd) {
+    background-color:ghostwhite;
+    }
 
     td {
     text-align: center;
