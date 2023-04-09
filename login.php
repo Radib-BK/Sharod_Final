@@ -63,7 +63,7 @@ session_start();
             <div class="form-inner">
                 <form action="#" method="post" class="login">
                     <div class="field">
-                        <input type="text" id="user_email" class="form-control" placeholder="Email Address" required="required" name="user_email">
+                        <input type="email" id="user_email" class="form-control" placeholder="Email Address" required="required" name="user_email">
                     </div>
                     <div class="field">
                         <input type="password" id="user_password" class="form-control" placeholder="Password" required="required" name="user_password">
@@ -78,7 +78,7 @@ session_start();
                         <input type="text" id="user_username" class="form-control" placeholder="Username" required="required" name="user_username">
                     </div>
                     <div class="field">
-                        <input type="text" id="user_email" class="form-control" placeholder="Email Address" required="required" name="user_email">
+                        <input type="email" id="user_email" class="form-control" placeholder="Email Address" required="required" name="user_email">
                     </div>
                     <div class="field">
                         <input type="text" id="user_address" class="form-control" placeholder="Your Address" required="required" name="user_address">
@@ -148,7 +148,7 @@ if (isset($_POST['user_login'])) {
     $user_email = $_POST['user_email'];
     $user_password = $_POST['user_password'];
 
-    if ($user_email == 'admin' and $user_password == 'admin') 
+    if ($user_email == 'admin@gmail.com' and $user_password == 'admin') 
     {
         echo "<script>
         setTimeout(function(){
