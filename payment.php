@@ -46,7 +46,7 @@ session_start();
         .transaction-section button {
             display: block;
             position: relative;
-            width: 20rem;
+            width: 25rem;
             aspect-ratio: 1/1;
             background-position: center;
             background-repeat: no-repeat;
@@ -62,15 +62,15 @@ session_start();
             box-shadow: #5b5b5b 0 0.5rem 1.5rem;
         }
 
-        .transaction-section button:nth-of-type(1) {
+        .transaction-section #bKash_button {
             background-image: url("payment/images/bKash.png");
         }
 
-        .transaction-section button:nth-of-type(2) {
+        .transaction-section #nagad_button {
             background-image: url("payment/images/nagad.png");
         }
 
-        .transaction-section button:nth-of-type(3) {
+        .transaction-section #cod_button {
             background-image: url("payment/images/cod.png");
         }
     </style>
@@ -114,9 +114,19 @@ session_start();
     <h1 class="text-center p-5">Total Bill Amount : <b class="text-danger fs-1"><?php total_cart_prices(); ?></b> Taka</h1>
     <h1 class="text-center p-2"><b class="text-primary fs-1"><u>SELECT A PAYMENT METHOD-</u></b></h1>
     <div class="transaction-section">
-        <button id="bKash_button"></button>
-        <button id="nagad_button"></button>
-        <button id="cod_button"></button>
+        <table>
+            <tr>
+                <td>
+                    <button id="bKash_button"></button>
+                </td>
+                <td>
+                    <button id="nagad_button"></button>
+                </td>
+                <td>
+                    <button id="cod_button"></button>
+                </td>
+            </tr>
+        </table>
     </div>
     <?php
 
