@@ -46,7 +46,7 @@ session_start();
         .transaction-section button {
             display: block;
             position: relative;
-            width: 25rem;
+            width: 20rem;
             aspect-ratio: 1/1;
             background-position: center;
             background-repeat: no-repeat;
