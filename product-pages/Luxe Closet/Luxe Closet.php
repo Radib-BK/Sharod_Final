@@ -1,3 +1,9 @@
+<?php
+include('../../includes/connect.php');
+include('../review_handler.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

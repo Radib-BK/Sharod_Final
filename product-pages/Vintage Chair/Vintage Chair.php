@@ -1,3 +1,9 @@
+<?php
+include('../../includes/connect.php');
+include('../review_handler.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -271,7 +277,10 @@
                 <section class="review-window">
 
                     <div class="review-list">
-                        <div class="review">
+                    <?php
+                                getreviews(6);
+                            ?>
+                        <!-- <div class="review">
                             <div class="reviewer">Emma Stone</div>
                             <div class="stars">
                                 <i class="star fas fa-star"></i>
@@ -304,7 +313,7 @@
                             </div>
                             <div class="description">I've been searching for the perfect lounge chair for months and I finally found it! This vintage chair is everything I wanted and more. 
                                 It's comfortable, sturdy, and looks amazing in my living room.</div>
-                        </div>
+                        </div> -->
                         
                         
                         

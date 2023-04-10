@@ -19,15 +19,15 @@
             <div class="navbar">
                 <pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
                 <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="shop.php">Shop</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
                 <div class="nav-icon">
-                    <i class="fas"><a href="account.html">&#xf2bd;</a></i>
-                    <i class="fas"><a href="#wishlist">&#xf004;</a></i>
-                    <i class="fas"><a href="#cart">&#xf07a;</a></i>
+                    <i class="fas"><a href="account.php">&#xf2bd;</a></i>
+                    <i class="fas"><a href="wishlist.php">&#xf004;</a></i>
+                    <i class="fas"><a href="cart.php">&#xf07a;</a></i>
                 </div>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>

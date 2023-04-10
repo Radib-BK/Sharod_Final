@@ -49,7 +49,7 @@ function getproducts()
         <p class='card-text fs-5' style='height: 8rem;'>$product_description</p>
         <p class='card-text fs-3'> Price : $product_price /=</p>
         <a href='shop.php?add_to_cart=$product_id' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
-        <a href='./product-pages/$product_title/$product_title.html' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
+        <a href='./product-pages/$product_title/$product_title.php' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
         </div>
         </div>
         </div>";
@@ -105,7 +105,7 @@ function getuniqueCategories()
                 <p class='card-text fs-5' style='height: 8rem;'>$product_description</p>
                 <p class='card-text fs-3'> Price : $product_price /=</p>
                 <a href='shop.php?add_to_cart=$product_id' class='btn btn-dark mx-4 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-warning rounded-pill'>Add To Cart</a>
-                <a href='./product-pages/$product_title/$product_title.html' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
+                <a href='./product-pages/$product_title/$product_title.php' class='btn btn-dark mx-5 my-4 py-3 fs-4 bg-gradient px-5 shadow-sm btn-outline-info rounded-pill'>View More</a>
                 </div>
                 </div>
                 </div>";

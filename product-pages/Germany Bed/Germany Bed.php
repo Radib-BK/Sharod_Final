@@ -1,3 +1,9 @@
+<?php
+include('../../includes/connect.php');
+include('../review_handler.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,6 +53,7 @@
     <!--js-->
     <script src="JS/menu.js" defer></script>
     <!--------------------------->
+
 </head>
 
 <body>
@@ -82,21 +89,34 @@
 
                 <div class="product-page-img">
 
+                    <div class="product-small-img">
+                        <img src="Images/Germany Bed1.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Bed2.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Bed3.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Bed4.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Bed5.jpg" onclick="myFunction(this)">
 
+                    </div>
 
                     <div class="img-container">
-                        <img class="blur" id="imageBox" src="Images/Royal Bed.png">
-                        <div class="content fade "> Royal Bed is the best quality bed you can get
+                        <img class="blur" id="imageBox" src="Images/Germany Bed1.jpg">
+                        <div class="content fade "> Germany Bed is the best quality bed you can get
                             to your dream bedroom an aesthetic look
                         </div>
                     </div>
                 </div>
 
+                <script>
+                    function myFunction(smallImg) {
+                        var fullImg = document.getElementById("imageBox");
+                        fullImg.src = smallImg.src;
+                    }
+                </script>
 
                 <div class="product-page-details">
 
 
-                    <strong id="product-title">SHAROD Royal Bed</strong>
+                    <strong id="product-title">Germany Mirrored Work Bedframe</strong>
 
 
 
@@ -106,19 +126,19 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-o"></span>
 
-                        <span class="review_count">1 review</span>
+                        <span class="review_count">4 reviews</span>
                     </span>
 
-                    <span class="price">$250 <del>260$</del></span>
+                    <span class="price">$850 <del>900$</del></span>
 
-                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>3.85% discount</span>
+                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>5.56% discount</span>
 
                     <span class="product-id">
                         <span class="diamond">&diams;</span>
                         <span class="title">Product ID:</span>
-                        <span class="id"> 101.13.102.034</span>
+                        <span class="id"> 101.10.123.201</span>
                     </span>
 
                     <span class="product-availability">
@@ -205,12 +225,12 @@
                     <div class="product-specs">
 
                         <ul>
-                            <li><span>Product Dimension(cm):</span> L-213.5 x W-162.5 x H-100</li>
-
-                            <li><span>Weight Capacity(kg):</span> 69</li>
-                            <li><span>Box Dimension(cm):</span> Box 1: L-160.5 x W-61.2 x H-10.8, Box 2: L-212 x W-30.7
-                                x H-10.5</li>
-                            <li><span>Box Weight(kg):</span> Box 1: 47, Box 2: 26</li>
+                            <li><span>Product Dimension(cm):</span> 215.2 x W-162.5 x H-140cm</li>
+                            <li><span>Product Weight(kg):</span> 111kg</li>
+                            <li><span>Box Dimension(cm):</span> Box 1: L-172 x W-150 x H-19
+                                Box 2: L-215 x W-60 x H-25
+                                Box 3: L-205 x W-78 x H-10</li>
+                            <li><span>Box Weight(kg):</span> Box 1: 54, Box 2: 46, Box 3: 19</li>
                             <li><span>Packaging Type:</span> Flatpack</li>
                         </ul>
                     </div>
@@ -220,41 +240,51 @@
                     <div class="product-description">
                         <div class="features">
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-bed"></i></div>
-                                <h3>Traditional Beauty</h3>
-                                <p>Royal bed has a traditional look with its MDF board construction. It is made from
-                                    natural wood like MDF,
-                                    so it is quite hard to distinguish it from the wooden beds. But it comes to you in
-                                    much cheaper price than wooden beds
-                                    as we directly deal with the suppliers without any intervene of middle man.
-                                    Its design has been kept simple to match with a mature personality elegantly. Check
-                                    it from the attached picture yourself.</p>
+                                <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                                <h3>Elegant Look</h3>
+                                <p>Our newly arrived Germany Bedframe has an elegant look with its headboard and
+                                    footboard being upholstered in premium velvet.
+                                    Its beautifully Quilted Headboard and astounding Silver Colour make the bed a
+                                    perfect fit for a sophisticated bedroom. </p>
                             </div>
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                                <h3>Classic Appeal </h3>
-                                <p>Royal bed combines form and function with its superior durability and classic visual
-                                    appeal.
-                                    It is made from natural wood like MDF, which is hard to distinguish but offers a
-                                    much cheaper price than wooden bed.
-                                    So, this will definitely be quite budget friendly for you.</p>
+                                <div class="feature-icon"><i class="fa-solid fa-peace"></i></div>
+                                <h3>Aesthetic Headboard</h3>
+                                <p>Our Germany Bed has diamond shaped, deep quilted Headboard wrapped in premium quality
+                                    Velvet which will make you feel like sleeping like the royals! Mirror as headboard
+                                    rail of this luxurious bed will create a slick vibe in your dream
+                                    Bedroom.</p>
                             </div>
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-recycle"></i></div>
-                                <h3>Sustainable Materials</h3>
-                                <p>Royal bed is crafted with sustainability in mind. The MDF board used in its
-                                    construction is made from recycled and renewable materials,
-                                    ensuring that your purchase is eco-friendly and reduces your carbon footprint. So,
-                                    not only is the bed stylish and affordable, but it's also environmentally
-                                    responsible.</p>
+                                <div class="feature-icon"><i class="fas fa-bed"></i></div>
+                                <h3>Comfort n Support </h3>
+                                <p>This trendy bed comes with high quality slat to ensure the right amount of comfort
+                                    and support. This allows even weight distribution and reduces pressure points on
+                                    your body. </p>
                             </div>
 
 
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-broom"></i></div>
-                                <h3>Aesthetic Strong Legs</h3>
-                                <p>Corner posts make the bed strong and sturdy and also keep it a bit high from the
-                                    ground which enables you to clean away the dirt and dust underneath the bed.</p>
+                                <div class="feature-icon"><i class="fas fa-hammer"></i></div>
+                                <h3>Strength & Support </h3>
+                                <p>Strong metal joint provides strength & support. It firmly joins the slats with the
+                                    bed frame so that there remains relatively less chance of breaking down.</p>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+                                <h3>Exquisite Footboard </h3>
+                                <p>Germany Bed has Velvet Upholstered foot board which would be a safer choice for
+                                    families with children.
+                                    In addition, mirror as footboard rail can easily make this magnificent bed the focal
+                                    point of any bedroom.</p>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
+                                <h3>Complete Look</h3>
+                                <p>Germany Mirror has matching bedside table, tallboy, mirror and dresser which will
+                                    give your bedroom a complete exquisite look.
+                                    It is a great way to decorate your dream bedroom with the collection of all the
+                                    aesthetic, strong & modern furniture.</p>
                             </div>
                         </div>
                     </div>
@@ -263,16 +293,18 @@
                 <div class="info-container key-features">
                     <div class="product-info">
                         <ul class="product-features">
-                            <li><i class="fa-solid fa-snowflake"></i></i>Natural Wood like MDF Board and Slats wood
-                                material is LVL (Laminated Veneer).</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Sturdy Slats to Provide Better Mattress Support
+                            <li><i class="fa-solid fa-snowflake"></i></i> Stunning Bedframe to Suit Any Deluxe Home</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Diamond Tufted Detailing on Headboard </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Deep Quilting on Headboard for a Stylish Look
                             </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Corner Protection Attached with the Box for
-                                Safe Transit</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Step by Step Assembly Instructions Provideds
+                            <li><i class="fa-solid fa-snowflake"></i></i> Footboard Upholstered in Fine Quality Velvet
                             </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Simple Home Assembly Is required.</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Smart Box Packaging</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Sturdy Construction to provide Long Lasting Use
+                            </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>High Quality Slats Help to Maintain Correct
+                                Posture</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Smart Box Packaging to Ensure Safe Delivery
+                            </li>
                         </ul>
                     </div>
 
@@ -284,8 +316,11 @@
                     <section class="review-window">
 
                         <div class="review-list">
-                            <div class="review">
-                                <div class="reviewer">Luna Starlight</div>
+                        <?php
+                                getreviews(5);
+                            ?>
+                            <!-- <div class="review">
+                                <div class="reviewer">Doel yami</div>
                                 <div class="stars">
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
@@ -293,8 +328,44 @@
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
                                 </div>
-                                <div class="description">A great bed for its price</div>
+                                <div class="description">Great design, really like it</div>
                             </div>
+                            <div class="review">
+                                <div class="reviewer">Ion Yui</div>
+                                <div class="stars">
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star far fa-star"></i>
+                                </div>
+                                <div class="description">Decent bed but sideboard feels empty
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="reviewer">Wassawa Sebanja</div>
+                                <div class="stars">
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star far fa-star"></i>
+                                </div>
+                                <div class="description">Great overally but the headboard tufting is not that
+                                    comfortable</div>
+                            </div>
+                            <div class="review">
+                                <div class="reviewer">Reasor Jase</div>
+                                <div class="stars">
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                    <i class="star fas fa-star"></i>
+                                </div>
+                                <div class="description">Stunning look and most importantly, comfortable
+                                </div>
+                            </div> -->
 
 
                         </div>

@@ -1,3 +1,9 @@
+<?php
+include('../../includes/connect.php');
+include('../review_handler.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,9 +92,11 @@
 
 
                     <div class="img-container">
-                        <img class="blur" id="imageBox" src="Images/RadiantLamp.png">
-                        <div class="content fade "> The Radiant Lamp adds a warm and cozy ambiance to any living room or
-                            bedroom with its elegant design and superior craftsmanship
+                        <img class="blur" id="imageBox" src="Images/ElevatedCouch.png">
+                        <div class="content fade ">The SHAROD Elevated Couch offers the best of both worlds: high
+                            quality and affordability.
+                            It is an ideal choice for anyone who wants to transform their living room into a comfortable
+                            space for sleeping without breaking the bank.
                         </div>
                     </div>
                 </div>
@@ -97,7 +105,7 @@
                 <div class="product-page-details">
 
 
-                    <strong id="product-title">SHAROD Radiant Lamp</strong>
+                    <strong id="product-title">SHAROD Elevated Couch</strong>
 
 
 
@@ -109,18 +117,18 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
 
-                        <span class="review_count">2 reviews</span>
+                        <span class="review_count">1 reviews</span>
                     </span>
 
-                    <span class="price">$50 <del>56$</del></span>
+                    <span class="price">$200 <del>220$</del></span>
 
-                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>10.71%
+                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>9.09%%
                         discount</span>
 
                     <span class="product-id">
                         <span class="diamond">&diams;</span>
                         <span class="title">Product ID:</span>
-                        <span class="id"> 101.13.113.034</span>
+                        <span class="id"> 101.13.111.098</span>
                     </span>
 
                     <span class="product-availability">
@@ -174,7 +182,7 @@
 
                     <div class="delivery">
                         <span class="fa fa-exclamation-circle"></span>
-                        Minimum delivery charge is 10$. May vary depending on location.
+                        Minimum delivery charge is 50$. May vary depending on location.
                     </div>
 
                     <div class="social-buttons">
@@ -207,13 +215,13 @@
                     <div class="product-specs">
 
                         <ul>
-                            <li><span>Product Dimension:</span> H-30 x W-15 x D-15cm</li>
-
-                            <li><span>Product Weight:</span> 1kg</li>
+                            <li><span>Product Dimension:</span> L-153 x W-94 x H-98</li>
+                            <li><span>Seat Height:</span> 35cm</li>
+                            <li><span>Product Weight:</span> 55.3</li>
                             <li><span>Weight Capacity:</span> 300kg</li>
-                            <li><span>Box Dimension:</span> : L-35 x W-20 x H-20cm</li>
-                            <li><span>Box Weight:</span> 1.5kg</li>
-                            <li><span>Packaging Type:</span> Assembled and Packaged Securely for Safe Delivery</li>
+                            <li><span>Box Dimension:</span> L-63 x W-52 x H-72cm</li>
+                            <li><span>Box Weight:</span> 61kg</li>
+                            <li><span>Packaging Type:</span> Back KD</li>
                         </ul>
                     </div>
 
@@ -222,39 +230,36 @@
                     <div class="product-description">
                         <div class="features">
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                                <h3>Sleek Design</h3>
-                                <p>Introducing our latest addition to your home decor - the sleek and modern Radiant
-                                    Lamp. With its cylindrical shape and a glossy finish, this lamp will definitely
-                                    catch everyone's eye.
-                                    It is perfect for any room in your home or office, and is sure to add a touch of
-                                    elegance to your space.</p>
+                                <div class="feature-icon"><i class="fa-solid fa-couch"></i></div>
+                                <h3>Luxurious Sofa</h3>
+                                <p>Aesthetic Demeanor in leatherette upholstery and fluffy cushioning of this recliner
+                                    sofa make it stand out from the crowd. Designed with style and comfort in mind,
+                                    cozy seat give this recliner an inviting look, while the comfy seats with plump
+                                    cushioning give it a luxurious feel.</p>
                             </div>
                             <div class="feature">
                                 <div class="feature-icon"><i class="fas fa-hammer"></i></div>
-                                <h3>Durable Material</h3>
-                                <p>Constructed with high-quality metal, this lamp is built to last.
-                                    It is sturdy and can withstand daily use without any issues. Whether you want to
-                                    place it on a bedside table or a desk, this lamp will hold up for years to come.
-                                </p>
+                                <h3>Sturdy Construction</h3>
+                                <p>We use high resilient foam in our sofas which will last longer and provide maximum
+                                    comfort.
+                                    The cushions of our Elevated Couch will provide you with the support you need to
+                                    relax, as well as giving it form and volume. </p>
                             </div>
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-wand-sparkles"></i></div>
-                                <h3>Soft Glow</h3>
-                                <p>The Lamp comes with a warm LED bulb that produces a soft, warm glow that is perfect
-                                    for reading, relaxing or even setting the mood
-                                    for a romantic evening. It is energy-efficient and will last for thousands of hours,
-                                    saving you money on your electricity bill.</p>
+                                <div class="feature-icon"><i class="fa-solid fa-mattress-pillow"></i></div>
+                                <h3>Fluffy Cushions</h3>
+                                <p>This bedside table comes with three drawers for storing your accessories. You can
+                                    neatly
+                                    arrange your everyday small staffs like medicine, moneybag, watch, pen, paper, glass
+                                    etc. there and thus keep your bedroom clutter free.</p>
                             </div>
 
 
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-table"></i></div>
-                                <h3>Versatile Placement</h3>
-                                <p>The Lamp is a versatile addition to your home decor, and can be placed in various
-                                    areas of your home or office.
-                                    Whether you want to use it on a bedside table, desk, or shelf, this lamp will fit
-                                    right in and add a touch of sophistication to any space.</p>
+                                <div class="feature-icon"><i class="fa-solid fa-gavel"></i></div>
+                                <h3>Strong and Sturdy</h3>
+                                <p>Comes to you in flat base in matching colour which make the sofa strong and sturdy.
+                                    Its shape, colour and gorgeous design offer an aesthetic look to your home.</p>
                             </div>
                         </div>
                     </div>
@@ -263,12 +268,12 @@
                 <div class="info-container key-features">
                     <div class="product-info">
                         <ul class="product-features">
-                            <li><i class="fa-solid fa-snowflake"></i></i> High-Quality Metal Construction</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Sleek and Modern Design </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Soft, Warm Glow LED Bulb </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Energy-Efficient</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Matches with Other Lamps in the Collection
-                            </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Fully Upholstered in Finest Leatherette</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Beautiful and Durable Upholstery </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Perfect to Kick Your Feet Up and Relax </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>High Density Foam to Provide Comfort</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Strong and Sturdy Construction</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Smart Packaging to Ensure Safe delivery</li>
                         </ul>
                     </div>
 
@@ -280,8 +285,11 @@
                     <section class="review-window">
 
                         <div class="review-list">
-                            <div class="review">
-                                <div class="reviewer">Lily Rose</div>
+                            <?php
+                                getreviews(2);
+                            ?>
+                            <!-- <div class="review">
+                                <div class="reviewer">Pedoistan Minden</div>
                                 <div class="stars">
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
@@ -289,21 +297,10 @@
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
                                 </div>
-                                <div class="description">I love this lamp, it makes my room feel so cozy and warm -
-                                    perfect for winding down after a busy day!</div>
-                            </div>
-                            <div class="review">
-                                <div class="reviewer">Jack Frost</div>
-                                <div class="stars">
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                </div>
-                                <div class="description">This lamp is seriously cool - it brightens up my space and
-                                    looks super fancy at the same time, definitely an awesome addition to my room!</div>
-                            </div>
+                                <div class="description">Comfortable enough for its low price.
+                                    Me and my daugther always sleeps on it in the afternoon</div>
+                            </div> -->
+
 
                         </div>
                     </section>
@@ -409,13 +406,6 @@
         });
 
     </script>
-
-
-
-
-
-
-
 
 </body>
 

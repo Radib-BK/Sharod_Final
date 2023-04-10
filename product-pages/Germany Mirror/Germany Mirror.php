@@ -1,3 +1,9 @@
+<?php
+include('../../includes/connect.php');
+include('../review_handler.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +11,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Product Details Page</title>
-
     <script src="https://kit.fontawesome.com/2eedae48ed.js" crossorigin="anonymous"></script>
-
     <!--Link to CSS code-->
     <link rel="stylesheet" href="CSS/Style.css" />
     <!--import poppins font-->
@@ -50,6 +53,7 @@
     <!--js-->
     <script src="JS/menu.js" defer></script>
     <!--------------------------->
+
 </head>
 
 <body>
@@ -86,18 +90,19 @@
                 <div class="product-page-img">
 
                     <div class="product-small-img">
-                        <img src="Images/AntiqueBed1.jpg" onclick="myFunction(this)">
-                        <img src="Images/AntiqueBed2.jpg" onclick="myFunction(this)">
-                        <img src="Images/AntiqueBed3.jpg" onclick="myFunction(this)">
-                        <img src="Images/AntiqueBed4.jpg" onclick="myFunction(this)">
-                        <img src="Images/AntiqueBed5.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Mirror 1.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Mirror 2.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Mirror 3.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Mirror 4.jpg" onclick="myFunction(this)">
+                        <img src="Images/Germany Mirror 5.jpg" onclick="myFunction(this)">
 
                     </div>
 
                     <div class="img-container">
-                        <img class="blur" id="imageBox" src="Images/AntiqueBed1.jpg">
-                        <div class="content fade "> Antique Bedside Table is the best quality bedside table you can get
-                            to your dream bedroom an aesthetic look
+                        <img class="blur" id="imageBox" src="Images/Germany Mirror 1.jpg">
+                        <div class="content fade "> Germany Mirror is a beautifully crafted reflective surface that
+                            provides
+                            a clear and crisp image, making it a perfect addition to any space.
                         </div>
                     </div>
                 </div>
@@ -112,7 +117,7 @@
                 <div class="product-page-details">
 
 
-                    <strong id="product-title">Antique Mirrored Work Bedframe</strong>
+                    <strong id="product-title">Germany Silver Colour Mirror</strong>
 
 
 
@@ -122,19 +127,19 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star-o"></span>
+                        <span class="fa fa-star checked"></span>
 
-                        <span class="review_count">5 reviews</span>
+                        <span class="review_count">1 review</span>
                     </span>
 
-                    <span class="price">$930 <del>1000$</del></span>
+                    <span class="price">$40 <del>50$</del></span>
 
-                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>7% discount</span>
+                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>20% discount</span>
 
                     <span class="product-id">
                         <span class="diamond">&diams;</span>
                         <span class="title">Product ID:</span>
-                        <span class="id"> 101.23.345.101</span>
+                        <span class="id"> 101.10.123.245</span>
                     </span>
 
                     <span class="product-availability">
@@ -188,7 +193,7 @@
 
                     <div class="delivery">
                         <span class="fa fa-exclamation-circle"></span>
-                        Minimum delivery charge is 50$. May vary depending on location.
+                        Minimum delivery charge is 10$. May vary depending on location.
                     </div>
 
                     <div class="social-buttons">
@@ -221,12 +226,11 @@
                     <div class="product-specs">
 
                         <ul>
-                            <li><span>Product Dimension(cm):</span> L-217.5 x W-191.5 x H-140</li>
-                            <li><span>Product Weight(kg):</span> 128</li>
-                            <li><span>Box Dimension(cm):</span> Box1: L-201 x W-150 x H-22, Box 2: L-217 x W-56 x H-25,
-                                Box 3: L-205 x W-93 x H-10</li>
-                            <li><span>Box Weight(kg):</span> Box 1: 78, Box 2: 43, Box 3: 20</li>
-                            <li><span>Packaging Type:</span> Flatpack</li>
+                            <li><span>Product Dimension(cm):</span> L-91.5 x W-3.2 x H-91.5cm</li>
+                            <li><span>Product Weight(kg):</span> 13kg</li>
+                            <li><span>Box Dimension(cm):</span> L-104 x W-13 x H-104cm</li>
+                            <li><span>Box Weight(kg):</span> 21kg</li>
+                            <li><span>Packaging Type:</span> Assembled</li>
                         </ul>
                     </div>
 
@@ -235,51 +239,43 @@
                     <div class="product-description">
                         <div class="features">
                             <div class="feature">
+                                <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                <h3>Astounding Look</h3>
+                                <p>Our newly arrived Germany Mirror looks so attractive with its octagon shape
+                                    and a border with mirror work & silver colour. It is easily a perfect fit for
+                                    anywhere
+                                    in your house or simply to the back of your dresser.</p>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon"><i class="fa-solid fa-hammer"></i></div>
+                                <h3>Sturdy Construction</h3>
+                                <p>MDF is used in the construction this mirror. This material provides the mirror a
+                                    strong
+                                    built and durability. If you’re looking for furniture that is strong and resistant,
+                                    then
+                                    opt for this one.</p>
+                            </div>
+                            <div class="feature">
                                 <div class="feature-icon"><i class="fas fa-gem"></i></div>
-                                <h3>Elegant Crystal Look</h3>
-                                <p>Our newly arrived Antique Bedframe has an elegant look with its gorgeous, tufted
-                                    Headboard. On top of that,
-                                    mirrorwork on its footboard, sideboard, headboard rail & legs gives it a crystal
-                                    look which makes it a perfect fit for any sophisticated bedroom.</p>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-peace"></i></div>
-                                <h3>Aesthetic Headboard</h3>
-                                <p>Our luxurious Antique Bed has diamond tufted Headboard wrapped in premium quality
-                                    Velvet which will provide you a divine comfort! Deep quilting and metal studded
-                                    buttons on the Headboard
-                                    will create a slick vibe in your dream bedroom.</p>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-shoe-prints"></i></div>
-                                <h3>Mirrored Footboard</h3>
-                                <p>Antique model has mirrorwork on its footboard, legs and on the side rails.
-                                    Its beautiful silver coloured footboard and mirror work make it a focal point of any
-                                    bedroom easily.</p>
+                                <h3>Clear Glass </h3>
+                                <p>This bed room unit comes with best quality glass so that it provides a clear,
+                                    undistorted
+                                    image.
+                                    Designed to flush fit against the wall or to the back of the dresser unit, Germany
+                                    mirror adds a beautiful stroke in your bedroom.</p>
                             </div>
 
 
                             <div class="feature">
-                                <div class="feature-icon"><i class="fas fa-bed"></i></div>
-                                <h3>Comfort n Support </h3>
-                                <p>This trendy bed comes with supreme quality slat to ensure the right amount of comfort
-                                    and support.
-                                    This allows even weight distribution and reduces pressure points on your body.</p>
+                                <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
+                                <h3>Complete Look</h3>
+                                <p>Germany Mirror has matching bed, bedside table, tallboy and dresser which will give
+                                    your
+                                    bedroom a complete exquisite look.
+                                    It is a great way to decorate your dream bedroom with the collection of all the
+                                    aesthetic, strong & modern furniture.</p>
                             </div>
-                            <div class="feature">
-                                <div class="feature-icon"><i class="fas fa-hammer"></i></div>
-                                <h3>Sturdy Construction </h3>
-                                <p>TMDF is used in the construction of this range. This material provides the furniture
-                                    a strong built and durability.
-                                    In addition, inbuilt A52 Solid wood handles are provided to let you pull out the
-                                    drawers easily and smoothly.</p>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-hand-fist"></i></div>
-                                <h3>Strength & Support</h3>
-                                <p>Strong metal joint provides strength & support. It firmly joins the slats with the
-                                    bed frame so that there remains relatively less chance of breaking down.</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -287,17 +283,12 @@
                 <div class="info-container key-features">
                     <div class="product-info">
                         <ul class="product-features">
-                            <li><i class="fa-solid fa-snowflake"></i></i> Mirrored Design to Suit Any Deluxe Home</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Diamond Tufted Detailing on Headboard </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Deep Quilting on Headboard for a Stylish Look
-                            </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Mirrored Work to Give a Crystal Look</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Sturdy Construction to provide Long Lasting Use
-                            </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Elevated from Floor with Mirror Covered Legs
-                            </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Smart Box Packaging to Ensure Safe Delivery
-                            </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Premium Quality Mirror</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Attractive Silver Colour </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Sturdy Construction with MDF </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Attractive Octagon shape </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Smart Packaging to Ensure Safe delivery</li>
+
                         </ul>
                     </div>
 
@@ -310,7 +301,7 @@
 
                         <div class="review-list">
                             <div class="review">
-                                <div class="reviewer">Jane Doe</div>
+                                <div class="reviewer">Leo Janet</div>
                                 <div class="stars">
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
@@ -318,62 +309,12 @@
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
                                 </div>
-                                <div class="description">Absolutely superb, crosses my expectations.</div>
-                            </div>
-                            <div class="review">
-                                <div class="reviewer">Claire flaire</div>
-                                <div class="stars">
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                </div>
-                                <div class="description">Really like the design
-
-                                </div>
-                            </div>
-                            <div class="review">
-                                <div class="reviewer">Brookie Sheild</div>
-                                <div class="stars">
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star far fa-star"></i>
-                                    <i class="star far fa-star"></i>
-                                </div>
-                                <div class="description">Great design but the headboard is not that comfortable</div>
-                            </div>
-                            <div class="review">
-                                <div class="reviewer">Atiq Mahbub</div>
-                                <div class="stars">
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star far fa-star"></i>
-                                </div>
-                                <div class="description">Stunning look, but the elevated foot below is not enough to
-                                    clean distribution
-                                    but large enough for small items to go under it and then hard to recover
-                                </div>
-                            </div>
-                            <div class="review">
-                                <div class="reviewer">Uncle Joe</div>
-                                <div class="stars">
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star fas fa-star"></i>
-                                    <i class="star far fa-star"></i>
-                                    <i class="star far fa-star"></i>
-                                </div>
-                                <div class="description">Overal design is comfortable but there should be little more
-                                    height in 3 sides
-                                    to ensure that mattress doesn't fall below
-                                </div>
+                                <div class="description">Great looking mirror</div>
                             </div>
 
                         </div>
+
+                
                     </section>
 
                     <div class="review-form">
@@ -387,8 +328,8 @@
 
 
                 </div>
-            </section>
 
+            </section>
 
         </div>
     </section>
@@ -477,6 +418,14 @@
         });
 
     </script>
+
+
+
+    </div>
+
+
+
+
 
 </body>
 

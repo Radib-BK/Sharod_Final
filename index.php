@@ -41,7 +41,7 @@ session_start();
 					<i class='fas'><a href='login.php'>&#xf07a;</a></i>";
                 } else {
                     echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
+					<i class='fas'><a href='wishlist.php'>&#xf004;</a></i>
 					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>";
                     if (cart_item() > 0) {
                         echo cart_item();
@@ -106,7 +106,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <p>25000/=</p>
-                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Elevated Couch/Elevated Couch.html';"></button>
+                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Elevated Couch/Elevated Couch.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
             <img src="images/product/couch1.png" alt="couch-image">
@@ -122,7 +122,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <p>10000/=</p>
-                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Vintage Chair/Vintage Chair.html';"></button>
+                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Vintage Chair/Vintage Chair.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
             <img src="images/product/seat4.png" alt="seat-image">
@@ -138,7 +138,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <p>3000/=</p>
-                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Radiant Lamp/Radiant Lamp.html';"></button>
+                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Radiant Lamp/Radiant Lamp.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
             <img src="images/product/lamp4.png" alt="lamp-image">
@@ -154,7 +154,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <p>45000/=</p>
-                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Royal Bed/Royal Bed.html';"></button>
+                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Royal Bed/Royal Bed.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
             <img src="images/product/bed2.png" alt="bed-image">
@@ -170,7 +170,7 @@ session_start();
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <p>40000/=</p>
-                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Luxe Closet/Luxe Closet.html';"></button>
+                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Luxe Closet/Luxe Closet.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
             <img src="images/product/waredrobe2.png" alt="waredrobe-image">
@@ -186,7 +186,7 @@ session_start();
                     <i class="fa-regular fa-star"></i>
                 </div>
                 <p>20000/=</p>
-                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Tropic Table Set/Tropic Table Set.html';"></button>
+                <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Tropic Table Set/Tropic Table Set.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
             <img src="images/product/table2.png" alt="table-image">

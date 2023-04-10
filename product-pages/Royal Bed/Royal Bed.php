@@ -1,3 +1,9 @@
+<?php
+include('../../includes/connect.php');
+include('../review_handler.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +53,6 @@
     <!--js-->
     <script src="JS/menu.js" defer></script>
     <!--------------------------->
-
 </head>
 
 <body>
@@ -83,35 +88,21 @@
 
                 <div class="product-page-img">
 
-                    <div class="product-small-img">
-                        <img src="Images/Germany Mirror 1.jpg" onclick="myFunction(this)">
-                        <img src="Images/Germany Mirror 2.jpg" onclick="myFunction(this)">
-                        <img src="Images/Germany Mirror 3.jpg" onclick="myFunction(this)">
-                        <img src="Images/Germany Mirror 4.jpg" onclick="myFunction(this)">
-                        <img src="Images/Germany Mirror 5.jpg" onclick="myFunction(this)">
 
-                    </div>
 
                     <div class="img-container">
-                        <img class="blur" id="imageBox" src="Images/Germany Mirror 1.jpg">
-                        <div class="content fade "> Germany Mirror is a beautifully crafted reflective surface that
-                            provides
-                            a clear and crisp image, making it a perfect addition to any space.
+                        <img class="blur" id="imageBox" src="Images/Royal Bed.png">
+                        <div class="content fade "> Royal Bed is the best quality bed you can get
+                            to your dream bedroom an aesthetic look
                         </div>
                     </div>
                 </div>
 
-                <script>
-                    function myFunction(smallImg) {
-                        var fullImg = document.getElementById("imageBox");
-                        fullImg.src = smallImg.src;
-                    }
-                </script>
 
                 <div class="product-page-details">
 
 
-                    <strong id="product-title">Germany Silver Colour Mirror</strong>
+                    <strong id="product-title">SHAROD Royal Bed</strong>
 
 
 
@@ -126,14 +117,14 @@
                         <span class="review_count">1 review</span>
                     </span>
 
-                    <span class="price">$40 <del>50$</del></span>
+                    <span class="price">$250 <del>260$</del></span>
 
-                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>20% discount</span>
+                    <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>3.85% discount</span>
 
                     <span class="product-id">
                         <span class="diamond">&diams;</span>
                         <span class="title">Product ID:</span>
-                        <span class="id"> 101.10.123.245</span>
+                        <span class="id"> 101.13.102.034</span>
                     </span>
 
                     <span class="product-availability">
@@ -187,7 +178,7 @@
 
                     <div class="delivery">
                         <span class="fa fa-exclamation-circle"></span>
-                        Minimum delivery charge is 10$. May vary depending on location.
+                        Minimum delivery charge is 50$. May vary depending on location.
                     </div>
 
                     <div class="social-buttons">
@@ -220,11 +211,13 @@
                     <div class="product-specs">
 
                         <ul>
-                            <li><span>Product Dimension(cm):</span> L-91.5 x W-3.2 x H-91.5cm</li>
-                            <li><span>Product Weight(kg):</span> 13kg</li>
-                            <li><span>Box Dimension(cm):</span> L-104 x W-13 x H-104cm</li>
-                            <li><span>Box Weight(kg):</span> 21kg</li>
-                            <li><span>Packaging Type:</span> Assembled</li>
+                            <li><span>Product Dimension(cm):</span> L-213.5 x W-162.5 x H-100</li>
+
+                            <li><span>Weight Capacity(kg):</span> 69</li>
+                            <li><span>Box Dimension(cm):</span> Box 1: L-160.5 x W-61.2 x H-10.8, Box 2: L-212 x W-30.7
+                                x H-10.5</li>
+                            <li><span>Box Weight(kg):</span> Box 1: 47, Box 2: 26</li>
+                            <li><span>Packaging Type:</span> Flatpack</li>
                         </ul>
                     </div>
 
@@ -233,43 +226,42 @@
                     <div class="product-description">
                         <div class="features">
                             <div class="feature">
+                                <div class="feature-icon"><i class="fa-solid fa-bed"></i></div>
+                                <h3>Traditional Beauty</h3>
+                                <p>Royal bed has a traditional look with its MDF board construction. It is made from
+                                    natural wood like MDF,
+                                    so it is quite hard to distinguish it from the wooden beds. But it comes to you in
+                                    much cheaper price than wooden beds
+                                    as we directly deal with the suppliers without any intervene of middle man.
+                                    Its design has been kept simple to match with a mature personality elegantly. Check
+                                    it from the attached picture yourself.</p>
+                            </div>
+                            <div class="feature">
                                 <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                                <h3>Astounding Look</h3>
-                                <p>Our newly arrived Germany Mirror looks so attractive with its octagon shape
-                                    and a border with mirror work & silver colour. It is easily a perfect fit for
-                                    anywhere
-                                    in your house or simply to the back of your dresser.</p>
+                                <h3>Classic Appeal </h3>
+                                <p>Royal bed combines form and function with its superior durability and classic visual
+                                    appeal.
+                                    It is made from natural wood like MDF, which is hard to distinguish but offers a
+                                    much cheaper price than wooden bed.
+                                    So, this will definitely be quite budget friendly for you.</p>
                             </div>
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-hammer"></i></div>
-                                <h3>Sturdy Construction</h3>
-                                <p>MDF is used in the construction this mirror. This material provides the mirror a
-                                    strong
-                                    built and durability. If you’re looking for furniture that is strong and resistant,
-                                    then
-                                    opt for this one.</p>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon"><i class="fas fa-gem"></i></div>
-                                <h3>Clear Glass </h3>
-                                <p>This bed room unit comes with best quality glass so that it provides a clear,
-                                    undistorted
-                                    image.
-                                    Designed to flush fit against the wall or to the back of the dresser unit, Germany
-                                    mirror adds a beautiful stroke in your bedroom.</p>
+                                <div class="feature-icon"><i class="fa-solid fa-recycle"></i></div>
+                                <h3>Sustainable Materials</h3>
+                                <p>Royal bed is crafted with sustainability in mind. The MDF board used in its
+                                    construction is made from recycled and renewable materials,
+                                    ensuring that your purchase is eco-friendly and reduces your carbon footprint. So,
+                                    not only is the bed stylish and affordable, but it's also environmentally
+                                    responsible.</p>
                             </div>
 
 
                             <div class="feature">
-                                <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
-                                <h3>Complete Look</h3>
-                                <p>Germany Mirror has matching bed, bedside table, tallboy and dresser which will give
-                                    your
-                                    bedroom a complete exquisite look.
-                                    It is a great way to decorate your dream bedroom with the collection of all the
-                                    aesthetic, strong & modern furniture.</p>
+                                <div class="feature-icon"><i class="fa-solid fa-broom"></i></div>
+                                <h3>Aesthetic Strong Legs</h3>
+                                <p>Corner posts make the bed strong and sturdy and also keep it a bit high from the
+                                    ground which enables you to clean away the dirt and dust underneath the bed.</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -277,12 +269,16 @@
                 <div class="info-container key-features">
                     <div class="product-info">
                         <ul class="product-features">
-                            <li><i class="fa-solid fa-snowflake"></i></i> Premium Quality Mirror</li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Attractive Silver Colour </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Sturdy Construction with MDF </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i> Attractive Octagon shape </li>
-                            <li><i class="fa-solid fa-snowflake"></i></i>Smart Packaging to Ensure Safe delivery</li>
-
+                            <li><i class="fa-solid fa-snowflake"></i></i>Natural Wood like MDF Board and Slats wood
+                                material is LVL (Laminated Veneer).</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Sturdy Slats to Provide Better Mattress Support
+                            </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Corner Protection Attached with the Box for
+                                Safe Transit</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i>Step by Step Assembly Instructions Provideds
+                            </li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Simple Home Assembly Is required.</li>
+                            <li><i class="fa-solid fa-snowflake"></i></i> Smart Box Packaging</li>
                         </ul>
                     </div>
 
@@ -294,8 +290,11 @@
                     <section class="review-window">
 
                         <div class="review-list">
-                            <div class="review">
-                                <div class="reviewer">Leo Janet</div>
+                            <?php
+                                getreviews(7);
+                            ?>
+                            <!-- <div class="review">
+                                <div class="reviewer">Luna Starlight</div>
                                 <div class="stars">
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
@@ -303,12 +302,11 @@
                                     <i class="star fas fa-star"></i>
                                     <i class="star fas fa-star"></i>
                                 </div>
-                                <div class="description">Great looking mirror</div>
-                            </div>
+                                <div class="description">A great bed for its price</div>
+                            </div> -->
+
 
                         </div>
-
-                
                     </section>
 
                     <div class="review-form">
@@ -413,9 +411,6 @@
 
     </script>
 
-
-
-    </div>
 
 
 

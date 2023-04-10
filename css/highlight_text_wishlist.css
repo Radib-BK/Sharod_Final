@@ -1,0 +1,21 @@
+.highlight-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10rem 0rem 3rem;
+    /* background-color: rgb(255, 253, 208, 0.95); */
+    background-image: linear-gradient(to right, rgb(255, 255, 255), #d78e35, rgba(255, 255, 255));
+}
+
+.highlight-text h2 {
+    font-family: "Kinfolk";
+    font-size: 3.5rem;
+    color: aliceblue;
+}
+
+.highlight-text p {
+    font-family: "EBGaramondItalic";
+    font-size: 2.5rem;
+    padding: 3rem 5rem;
+}

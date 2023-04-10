@@ -41,7 +41,7 @@ session_start();
                 }
                 else{
                     echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
-					<i class='fas'><a href='#wishlist'>&#xf004;</a></i>
+					<i class='fas'><a href='wishlist.php'>&#xf004;</a></i>
 					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>"; 
 					if(cart_item() > 0){
 					echo cart_item();
