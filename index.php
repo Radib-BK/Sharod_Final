@@ -60,7 +60,7 @@ session_start();
             <div class="hero-info">
                 <h5 class="adjective">Beautiful</h5>
                 <h1>Interior Designs</h1>
-                <a href="#" class="btn">Explore Now</a>
+                <a href="shop.php" class="btn">Explore Now</a>
             </div>
         </div>
     </header>
