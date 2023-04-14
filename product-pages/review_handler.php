@@ -31,7 +31,7 @@ function getreviews($product_id)
 
     while ($row = mysqli_fetch_assoc($result_query)) {
         $feedback_rating = $row['rating'];
-        $feedback_description = $row['description'];
+        $feedback_description = $row['desc'];
         $feedback_user = $row['username'];
 
         echo "<div class='review'>

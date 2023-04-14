@@ -1,6 +1,13 @@
 footer {
-    background-image: linear-gradient(rgb(255, 253, 208, 0.95), rgba(80, 79, 64, 0.45));
+    font-family: "Josefin Sans";
+    background-color: rgb(51, 51, 51);
     padding: 5rem 0 10rem 0;
+    color: rgb(255, 253, 208);
+}
+
+footer h4,
+footer a {
+    color:#d78e35;
 }
 
 .footer-box {
@@ -23,20 +30,19 @@ footer {
 .footer-box .footer-text:nth-of-type(1) p {
     float: left;
     padding: 1.5rem 0 0 3rem;
-    opacity: 0.65;
+    opacity: 0.5;
 }
 
 .footer-box .footer-text h4 {
-    text-transform: uppercase;
     font-size: 2.25rem;
     font-weight: bold;
 }
 
 .footer-box .footer-text ul li {
-    opacity: 0.65;
+    opacity: 0.75;
     padding: .5rem 0 0 0;
 }
 
-.footer-box .footer-text ul li:hover {
-    opacity: 1;
+.footer-box .footer-text ul li:hover > a {
+    color:rgb(255, 253, 208);
 }

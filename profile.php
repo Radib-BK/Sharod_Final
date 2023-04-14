@@ -42,8 +42,8 @@ $pass = $row_fetch['password'];
             <ul class="nav-list">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
             <div class="nav-icon">
             <?php
@@ -53,7 +53,7 @@ $pass = $row_fetch['password'];
                 } else {
                     echo "
 					<i class='fas'><a href='wishlist.php'>&#xf004;</a></i>
-					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>";
+					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup style='color:red;'>";
                     if (cart_item() > 0) {
                         echo cart_item();
                     }
@@ -70,7 +70,7 @@ $pass = $row_fetch['password'];
     <div class="container_main">
         <div class="p_container">
             <div class="sidebar">
-                <h2>- MY PROFILE -</h2>
+                <h2>~ MY PROFILE ~</h2>
                 <ul>
                     <li class="active" data-target="#personalInformationSection">Personal Information</li>
                     <li data-target="#changePasswordSection">Change Password</li>

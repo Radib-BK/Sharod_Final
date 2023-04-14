@@ -145,6 +145,7 @@ input[type="radio"] {
 }
 
 .wrapper .form-container {
+  margin-top: 5rem;
   width: 100%;
   overflow: hidden;
 }
@@ -231,7 +232,7 @@ form .btn input[type="submit"] {
   background: none;
   border: none;
   border-radius: 2.5rem;
-  color: rgb(13, 255, 0);
+  color: rgb(255, 253, 208, 0.95);
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 500;

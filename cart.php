@@ -30,8 +30,8 @@ session_start();
             <ul class="nav-list">
                 <li class=""><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
             </ul>
             <div class="nav-icon">
                 <?php

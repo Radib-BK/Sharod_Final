@@ -15,7 +15,7 @@
 /* Define the sidebar element and set its properties */
 .sidebar {
   margin-top: 7.2rem;
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   width: 25rem;
   padding: 2rem;
@@ -23,6 +23,11 @@
 
 /* Remove default list styling from sidebar unordered list */
 .sidebar ul {
+  list-style: none;
+}
+
+.sidebar h2 {
+  color: rgb(255, 253, 208);
   list-style: none;
 }
 
@@ -35,6 +40,7 @@
 /* Set styling for the active item in sidebar unordered list */
 .sidebar li.active {
   font-weight: bold;
+  color: #d78e35dd;
 }
 
 /* Define the main content area and set its properties */
@@ -79,7 +85,7 @@ input {
 }
 
 button:hover {
-  color: rgb(246, 223, 192);
+  color: #fff;
 }
 
 button {
@@ -90,8 +96,8 @@ button {
   padding: 1.4rem;
   border-radius: 2.5rem;
   border: #ddd;
-  background-color: #333333e8;
-  color: #fff;
+  background-color: #d78e35;
+  color: #000;
   cursor: pointer;
   box-shadow: 0.5rem 0.6rem 0.8rem rgba(0, 0, 0, 0.268);
 }
@@ -109,13 +115,13 @@ button {
 }
 
 #logout_btn:hover{
-  color: red;
+  color:#d78e35;
 }
 
 #delete_btn {
-  background-color: #000000d6;
-  border:#a0a0a0;
-  color: #ffa21f;
+  background-color: #333;
+  border:#ffa21f;
+  color: #ffffff;
   padding: 1rem 3.5rem;
   text-decoration:double;
   margin: 2rem 0rem;
@@ -125,7 +131,7 @@ button {
 }
 
 #delete_btn:hover{
-  color: red;
+  color: rgba(255, 50, 50, 0.909);
 }
 
 

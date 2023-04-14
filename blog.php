@@ -1,171 +1,118 @@
+<?php
+include('includes/connect.php');
+include('functions/common_funcs.php');
+session_start();
+?>
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/body.css" />
-    <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/styleblogs.css">
-    <title>Blogs</title>
-    </head>
-    <body>
+<html lang="en">
 
-        <!-- header -->
-        <header>
-            <div class="navbar">
-                <pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
-                <ul class="nav-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="shop.php">Shop</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-                <div class="nav-icon">
-                    <i class="fas"><a href="account.php">&#xf2bd;</a></i>
-                    <i class="fas"><a href="wishlist.php">&#xf004;</a></i>
-                    <i class="fas"><a href="cart.php">&#xf07a;</a></i>
-                </div>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                    <i class="fas fa-times"></i>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SHAROD - Furniture & Interior Decoration</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/highlight_text.css">
+
+    <script src="js/home.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <header>
+        <div class="navbar">
+            <pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
+            <ul class="nav-list">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-icon">
+            <?php
+                if (!isset($_SESSION['email'])) {
+                    echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
+					<i class='fas'><a href='login.php'>&#xf07a;</a></i>";
+                } else {
+                    echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
+					<i class='fas'><a href='wishlist.php'>&#xf004;</a></i>
+					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup style='color:red;'>";
+                    if (cart_item() > 0) {
+                        echo cart_item();
+                    }
+                    echo "</sup>";
+                }
+            ?>
             </div>
-          </header>     
-          
-          <div class= "totel">
-          <main>
-          
-                <article>
-                    <div class="erste"><img src="images/Screenshot 2023-03-05 at 11-49-39 Blog - FineWoodworking.png"> </div>
-                        <div class="kader">
-                        <h1 class="titel">Chainsawn spirals </h1>
-                        <ul class="links">
-                            <li class="l1"><a href="#">Articles </a></li>
-                            <li class="l2"><a href="#">News</a></li>
-                            <li class="l3"><a href="#">Breaking</a></li>
-                        </ul>
-                        <hr>
-                        <p class="text1">The giant trunk of a cottonwood tree, a chainsaw, power planer, and a lot of waiting went into the construction of these carved spiral tables. 
-                        <br>Eight years ago, a logging truck pulled up to Howard Werner’s studio outside Phoenix with a delivery. The truck’s crane hoisted the trunk of a 7-ft.-dia. cottonwood tree and nimbly set it on the covered concrete slab where Werner carves his furniture and sculpture with a chainsaw. The scale on the crane read “15,000 lb.” Werner used his largest saw to cut two 3-ft.-sq. chunks 
-                        from the trunk for these tables and to saw their top and bottom faces flat and parallel. After finessing those surfaces </p>
-                        <div class="more-link"> <a href="https://www.finewoodworking.com/2023/03/03/chainsawn-spirals">Read More</a> </div>   
-                        </div>
-               </article>
-                
-               <article>
-                <div class="erste"><img src="images/blog2.png"> </div>
-                    <div class="kader">
-                    <h1 class="titel">Exciting Interior Design Trends for 2023 </h1>
-                    <ul class="links">
-                        <li class="l1"><a href="#">Articles </a></li>
-                        <li class="l2"><a href="#">News</a></li>
-                        <li class="l3"><a href="#">Breaking</a></li>
-                    </ul>
-                    <hr>
-                    <p class="text1"> Some people are even buying into maximalism with an array of colorful patterns, a profusion of plants, interesting collections and layered textures. If a wild array of contrasting patterns and animal prints is not your style, try adding some exciting accents to your neutral decor in the coming year. While not every trend is worth following, here are some concepts that should be on your radar for 2023.</p>
-                    <div class="more-link"> <a href="https://www.homelivingfurniture.com/blog384/exciting-interior-design-trends-for-2023">Read More</a> </div>   
-                    </div>
-                </article>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </header>
 
-                <article>
-                <div class="erste"><img src="images/blog3.png"> </div>
-                    <div class="kader">
-                    <h1 class="titel">One-Stop Shopping for Children's Furniture </h1>
-                    <ul class="links">
-                        <li class="l1"><a href="#">Articles </a></li>
-                        <li class="l2"><a href="#">News</a></li>
-                        <li class="l3"><a href="#">Breaking</a></li>
-                    </ul>
-                    <hr>
-                    <p class="text1">Find the kid's bedroom furniture you need online and at children's furniture stores in Howell and Middletown, New Jersey. Home Living Furniture offers a one-stop shopping experience to make choosing furniture for your child a convenient and time-saving experience. </p>
-                    <div class="more-link"> <a href="https://www.homelivingfurniture.com/blog366/one-stop-shopping-for-childrens-furniture">Read More</a> </div>   
-                    </div>
-                </article>
-                
-                
-                <article>
-                    <div class="erste"><img src="images/blog4.png"> </div>
-                        <div class="kader">
-                        <h1 class="titel">How to Make a Small Bedroom Look Bigger </h1>
-                        <ul class="links">
-                            <li class="l1"><a href="#">Articles </a></li>
-                            <li class="l2"><a href="#">News</a></li>
-                            <li class="l3"><a href="#">Breaking</a></li>
-                        </ul>
-                        <hr>
-                        <p class="text1">Your bedroom is an important room in the house where you can unplug, unwind and enjoy a restful night's sleep. Even if you have a small bedroom, it can be an inviting place where you can look forward to a restful night of rejuvenation to prepare for the challenges of the next day.</p>
-                        <div class="more-link"> <a href="">Read More</a> </div>   
-                        </div>
-                    </article>
-                
-                
-                    <article>
-                        <div class="erste"><img src="images/blog5.png"> </div>
-                            <div class="kader">
-                            <h1 class="titel">Setting the Trends at Ashley Furniture </h1>
-                            <ul class="links">
-                                <li class="l1"><a href="#">Articles </a></li>
-                                <li class="l2"><a href="#">News</a></li>
-                                <li class="l3"><a href="#">Breaking</a></li>
-                            </ul>
-                            <hr>
-                            <p class="text1"> Whether you are changing an entire room for a more modern look or if you are looking for a special accent piece, you can find an Ashley furniture collection that fits your needs and your taste. Look for updated styles for the living room, dining room and bedroom, as well as the home office and the entertainment space. Ashley also provides a wide choice of outdoor furniture sets that expand your living space. </p>
-                            <div class="more-link"> <a href="https://www.homelivingfurniture.com/blog352/setting-the-trends-at-ashley-furniture">Read More</a> </div>   
-                            </div>
-                    </article>                
-          </main>
+    <!--ARTICLES-->
 
+    <section class="highlight-text2">
+        <h2>~&nbsp;&nbsp;Blogs&nbsp;&nbsp;~</h2>
+    </section>
+    <section class="article">
+        <div class="article-card">
+            <img src="images/article/art-img-01.webp" alt="art-img-01">
+            <div class="article-text">
+                <h3>10 Of The Best Minimalist Bed Frames</h3>
+                <h4>Cate St Hill | October 06, 2022</h4>
+                <p>It's time for another 'Best of' - rounding up 10 of the best minimalist designs in a particular furniture category. Today it's the turn of minimalist bed frames. It's a post I've...</p>
+                <a href="https://catesthill.com/2022/10/06/10-of-the-best-minimalist-bed-frames/">Read the article</a>
+            </div>
+        </div>
+        <div class="article-card">
+            <img src="images/article/art-img-02.webp" alt="art-img-02">
+            <div class="article-text">
+                <h3>New interior project: a cool industrial style home with a cosy window seat</h3>
+                <h4>Cate St Hill | May 25, 2022</h4>
+                <p>With tall lofty ceilings, black Crittall style doors and beautiful wooden flooring, this new build apartment in east London already had good bones. The brief was to...</p>
+                <a href="https://catesthill.com/2022/05/25/new-interior-project-a-cool-industrial-style-home-with-a-cosy-window-seat/">Read the article</a>
+            </div>
+        </div>
+        <div class="article-card">
+            <img src="images/article/art-img-03.jpg" alt="art-img-03"></img>
+            <div class="article-text">
+                <h3>Swivel Chair: A touch of innovation in the office</h3>
+                <h4>Shahrin Ara | February 28, 2023</h4>
+                <p>The swivel chair is called the lifeblood of the workplace. Because this chair is flexible, it has a high rate of comfort in office work. Moreover, furniture brands can...</p>
+                <a href="https://hatil.com/blog/swivel-chair-a-great-addition-to-your-office-2/">Read the article</a>
+            </div>
+        </div>
+        <div class="article-card">
+            <img src="images/article/art-img-04.jpg" alt="art-img-04">
+            <div class="article-text">
+                <h3>"First Light" is Benjamin Moore's Color of the Year 2020</h3>
+                <h4>Colleen Curry | October 11, 2019</h4>
+                <p>Benjamin Moore & Co. has revealed its Color of the Year 2020 as a warm, rosy pink named First Light. It's the company's first time...</p>
+                <a href="https://interiordesign.net/designwire/first-light-is-benjamin-moore-s-color-of-the-year-2020/">Read the article</a>
+            </div>
+        </div>
+    </section>
 
-          <aside>
-            <ul>
-                <ul class="saidbaar">
-                    <li class="S1"> 
-                        <div class="erstesaid"></div> 
-                        <div class="kadersaid">
-                            <h1 class="titelsaid">Frequently Asked Questions </h1>
-                        
-                            <hr>
-                            <p class="text1"> TEXT </p>
-                            
-                            <p class="ques">
-                                Q1: How long does it take for my products to be made and delivered?
-                                <br>
-                            </p>
-                            <p class="ans">
-                                Ans: Production and delivery time varies depending on the item(s) ordered, your customisation options and your location. We always aim to deliver within 4 weeks from the date of your order.    
-                            </p>
+    <!-- SUBSCRIPTION SECTION-->
+    <section class="subscription">
+        <div>
+            <h2>Subscribe to our newsletter</h2>
+            <p>Join our community and stay in the loop with the latest furniture trends and exclusive deals.</p>
+            <input type="email" placeholder="Your email">
+            <button class="btn">Subscribe</button>
+        </div>
+        <div class="subscription-image"></div>
+    </section>
 
-                            <p class="ques">
-                                Q2: What happens if I don't like the product once it arrives?
-                                <br>
-                            </p>
-                            <p class="ans">
-                                Ans: We're confident you will like your product But just in case, we have a Return for Any Reason policy. If you are unhappy, simply contact us to arrange for your return.
-                            </p>
-
-                            <p class="ques">
-                                Q3: What do I do if I have a problem with a FIT product?
-                                <br>
-                            </p>
-                            <p class="ans">
-                                Ans: We will help you with any queries after your purchase. Contact us at hello@fit-furniture.com if you require any assistance with your product after purchase.
-                            </p>
-
-                            <div class="more-link"> <a href="faq.html">Read More</a> </div>   
-                        </div>
-                    </li>    
-                 </ul>
-            </ul> 
-                
-          </aside>
-          
-    </div>
-                
-          
     <!-- FOOTER SECTION -->
     <footer>
         <div class="footer-box">
@@ -173,6 +120,13 @@
                 <pre class="logo">{ SHAROD }</pre>
                 <p>Bringing your home closer to you, one piece at a time.</p>
             </div>
+            <!-- <div class="footer-text">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="../blog-and-review-page/blogs.html">Blogs</a></li>
+                    <li><a href="../blog-and-review-page/review.html">Reviews</a></li>
+                </ul>
+            </div> -->
             <div class="footer-text">
                 <h4>Help</h4>
                 <ul>
@@ -202,5 +156,6 @@
             </div>
         </div>
     </footer>
-    </body>
+</body>
+
 </html>

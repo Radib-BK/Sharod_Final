@@ -120,7 +120,7 @@ session_start();
                         <span class="review_count">1 reviews</span>
                     </span>
 
-                    <span class="price">$200 <del>220$</del></span>
+                    <!-- <span class="price">$200 <del>220$</del></span>
 
                     <span class="product-discount"><i class="fa fa-tag" aria-hidden="true"></i></i>9.09%%
                         discount</span>
@@ -129,7 +129,7 @@ session_start();
                         <span class="diamond">&diams;</span>
                         <span class="title">Product ID:</span>
                         <span class="id"> 101.13.111.098</span>
-                    </span>
+                    </span> -->
 
                     <span class="product-availability">
                         <span class="diamond">&diams;</span>

@@ -1,0 +1,50 @@
+/*added*/ @font-face {
+    font-family: "Kinfolk";
+    src: url('../textfonts/FontsFree-Net-Kinfolk_Reg.ttf') format('truetype');
+}
+
+.highlight-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10rem 0rem 3rem;
+    /* background-color: rgb(255, 253, 208, 0.95); */
+    background-color: #eee;
+}
+
+.highlight-text h2 {
+    font-family: "Kinfolk";
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.highlight-text p {
+    font-family: "EBGaramondItalic";
+    font-size: 2.5rem;
+    padding: 3rem 5rem;
+}
+
+.highlight-text2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10rem 0rem 3rem;
+    /* background-color: rgb(255, 253, 208, 0.95); */
+    background-color: #eee;
+}
+
+.highlight-text2 h2 {
+    font-family: "Kinfolk";
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.highlight-text2 p {
+    font-family: "EBGaramondItalic";
+    font-size: 2.5rem;
+    padding: 3rem 5rem;
+}

@@ -88,12 +88,12 @@ session_start();
 
     <header>
         <div class="navbar">
-            <pre><a class="logo" href="#index">{ SHAROD }</a></pre>
+            <pre><a class="logo" href="../../index.php">{ SHAROD }</a></pre>
             <ul class="nav-list">
-                <li><a href="#index">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../../shop.php">Shop</a></li>
+                <li><a href="../../blog.php">Blog</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-icon">
                 <a href="#account"><i class="fas">&#xf2bd;</i></a>
@@ -526,31 +526,31 @@ session_start();
 
             // Do something with the review text
             var reviewText = textarea.value;
-            console.log(reviewText, ratingValue);
+            //console.log(reviewText, ratingValue);
 
-            $.ajax({
-                url:'Antique%20Bed.php',
-                method: 'POST',
-                data: {
-                    'review_rating': ratingValue,
-                    'review_text': reviewText,
-                    'review_product_id': 1
-                },
-                success: function(response) {
-                    allowSubmit = true;
+            // $.ajax({
+            //     url:'Antique%20Bed.php',
+            //     method: 'POST',
+            //     data: {
+            //         'review_rating': ratingValue,
+            //         'review_text': reviewText,
+            //         'review_product_id': 1
+            //     },
+            //     success: function(response) {
+            //         allowSubmit = true;
                     
-                    console.log(allowSubmit);
-                    <?php echo postreviews()?>
-                    console.log(allowSubmit);
+            //         console.log(allowSubmit);
+            //         <?php echo postreviews()?>
+            //         console.log(allowSubmit);
                     
                     if(!allowSubmit) {
                         alert('[Submission Cancelled]');
                     }
-                    else{
-                        $('#rev-sec').html($('#rev-sec').html());
-                    }
-                }
-            });
+                    // else{
+                    //     $('#rev-sec').html($('#rev-sec').html());
+                    // }
+            //     }
+            // });
             
             // Reset the form
             form.reset();
@@ -558,44 +558,41 @@ session_start();
     </script>
     
 <?php
-function postreviews(){
-    echo '<script>console.log("insidepostreviews");</script>';
     if(isset($_SESSION['email'])) {
-        global $con;
-        $email = $_SESSION['email'];
-        
-        $select_query = "SELECT * FROM user_table WHERE email = '$email'";
-        $result_query = mysqli_query($con, $select_query);
-        
-        while($row = mysqli_fetch_assoc($result_query)){
-            $user_id = $row['user_id'];
+        if(isset($_POST['review-submit'])) {
+            global $con;
+            $email = $_SESSION['email'];
             
-            $feedback_rating = $_POST['review_rating'];
-            $feedback_description = $_POST['review_text'];
+            $select_query = "SELECT * FROM `user_table` WHERE email = '$email'";
+            $result_query = mysqli_query($con, $select_query);
             
-            $product_id = $_POST['review_product_id'];
+            while($row = mysqli_fetch_assoc($result_query)){
+                $user_id = $row['User_id'];
+                
+                $feedback_rating = 4;
+                $feedback_description = $_POST['review-text'];
+                
+                $product_id = 1;
+                
+                // $check_query = "SELECT * FROM feedback WHERE user_id = $user_id AND product_id = $product_id";
+                // $result_check = mysqli_query($con, $check_query);
             
-            $check_query = "SELECT * FROM feedback WHERE user_id = $user_id AND product_id = $product_id";
-            $result_check = mysqli_query($con, $check_query);
-            
-            echo "<script>console.log($feedback_rating, $feedback_description);</script>";
-            
-            if($result_check) {
-                $feedback_id = $row['feedback_id'];
-                $update_query = "UPDATE feedback SET feedback_description = '$feedback_description' WHERE feedback_id = $feedback_id";
-                $result_update = mysqli_query($con,$update_query);
-            }
-            else {   
-                $insert_query = "INSERT INTO feedback (rating, description, user_id, product_id) VALUES($feedback_rating, $feedback_description, $user_id, $product_id)";
+            // if($result_check) {
+            //     $feedback_id = $row['feedback_id'];
+            //     $update_query = "UPDATE feedback SET feedback_description = '$feedback_description' WHERE feedback_id = $feedback_id";
+            //     $result_update = mysqli_query($con,$update_query);
+            // }
+            // else {   
+                $insert_query = "INSERT INTO `feedback` (rating, desc, user_id, product_id) VALUES ('$feedback_rating', '$feedback_description', '$user_id', '$product_id')";
                 $result_insert = mysqli_query($con,$insert_query);
-            }
+            // }
+        }
         }
     }
     else {
         echo "<script>allowSubmit = false;</script>";
     }
-}
-
+    
 ?>
 
 </body>

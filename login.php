@@ -36,8 +36,8 @@ session_start();
             <ul class="nav-list">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-icon">
                 <i class="fas"><a href="#cart">&#xf07a;</a></i>

@@ -14,6 +14,7 @@
     position: fixed;
     line-height: 7.5rem;
     background-color: rgb(255, 253, 208, 0.95);
+    font-family: "Josefin Sans";
     display: flex;
     justify-content: space-between;
     z-index: 1;

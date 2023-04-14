@@ -17,12 +17,12 @@ if(!isset($_SESSION['email'])){
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/home.css">
-	<link rel="stylesheet" type="text/css" href="css/highlight_text_wishlist.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/home.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/highlight_text.css">
 	<link rel="stylesheet" type="text/css" href="css/shop.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="css/body.css">
-	<link rel="stylesheet" type="text/css" href="css/footer.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<script src="js/app.js" defer></script>
 	<script src="js/shop.js" defer></script>
 </head>
@@ -30,26 +30,37 @@ if(!isset($_SESSION['email'])){
 <body>
 	<header>
 		<div class="navbar">
-			<pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
-			<ul class="nav-list">
-				<li class=""><a href="index.php">Home</a></li>
-				<li><a href="shop.php">Shop</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="">Contact</a></li>
-			</ul>
-			<div class="nav-icon">
-                <i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
-                <i class="fas"><a href="wishlist.php">&#xf004;</a></i>
-                <i class="fas"><a href="cart.php">&#xf07a;</a></i>
+            <pre><a class="logo" href="index.php">{ SHAROD }</a></pre>
+            <ul class="nav-list">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-icon">
+            <?php
+                if (!isset($_SESSION['email'])) {
+                    echo "<i class='fas'><a href='login.php'>&#xf2bd;</a></i>
+					<i class='fas'><a href='login.php'>&#xf07a;</a></i>";
+                } else {
+                    echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
+					<i class='fas'><a href='wishlist.php'>&#xf004;</a></i>
+					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>";
+                    if (cart_item() > 0) {
+                        echo cart_item();
+                    }
+                    echo "</sup>";
+                }
+            ?>
             </div>
-			<div class="menu-toggle">
-				<i class="fas fa-bars"></i>
-				<i class="fas fa-times"></i>
-			</div>
-		</div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
 	</header>
 	<section class="highlight-text">
-        <h2>~&nbsp;{&nbsp;Wishlist&nbsp;}&nbsp;~</h2>
+        <h2>~&nbsp;&nbsp;Wishlist&nbsp;&nbsp;~</h2>
     </section>
 	<main>
 		<div class="row">
@@ -66,36 +77,47 @@ if(!isset($_SESSION['email'])){
 		</div>
 	</main>
 	<footer>
-		<div class="footer-box">
-			<div class="footer-text">
-				<pre class="logo">{ SHAROD }</pre>
-				<p>Bringing your home closer to you, one piece at a time.</p>
-			</div>
-			<div class="footer-text">
-				<h4>Help</h4>
-				<ul>
-					<li><a href="#">Plans</a></li>
-					<li><a href="#">Track Order</a></li>
+        <div class="footer-box">
+            <div class="footer-text">
+                <pre class="logo">{ SHAROD }</pre>
+                <p>Bringing your home closer to you, one piece at a time.</p>
+            </div>
+            <!-- <div class="footer-text">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="../blog-and-review-page/blogs.html">Blogs</a></li>
+                    <li><a href="../blog-and-review-page/review.html">Reviews</a></li>
                 </ul>
-			</div>
-			<div class="footer-text">
-				<h4>About Us</h4>
-				<ul>
-					<li><a href="#">Our Story</a></li>
-					<li><a href="#">Press</a></li>
-					<li><a href="#">Career</a></li>
-				</ul>
-			</div>
-			<div class="footer-text">
-				<h4>Follow Us</h4>
-				<div class="social-links">
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-			</div>
-		</div>
-	</footer>
+            </div> -->
+            <div class="footer-text">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Plans</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-text">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-text">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instgram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 

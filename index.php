@@ -18,7 +18,8 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/home.css">
-    
+    <link rel="stylesheet" href="css/more_button.css">
+
     <script src="js/home.js" defer></script>
 </head>
 
@@ -31,8 +32,8 @@ session_start();
             <ul class="nav-list">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-icon">
             <?php
@@ -42,7 +43,7 @@ session_start();
                 } else {
                     echo "<i class='fas'><a href='profile.php'>&#xf2bd;</a></i>
 					<i class='fas'><a href='wishlist.php'>&#xf004;</a></i>
-					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup class='text-danger'>";
+					<i class='fas'><a href='cart.php'>&#xf07a;</a></i><sup style='color:red;'>";
                     if (cart_item() > 0) {
                         echo cart_item();
                     }
@@ -105,7 +106,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>25000/=</p>
+                <p>25000 BDT</p>
                 <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Elevated Couch/Elevated Couch.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
@@ -121,7 +122,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>10000/=</p>
+                <p>10000 BDT</p>
                 <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Vintage Chair/Vintage Chair.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
@@ -137,7 +138,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>3000/=</p>
+                <p>3000 BDT</p>
                 <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Radiant Lamp/Radiant Lamp.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
@@ -153,7 +154,7 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>45000/=</p>
+                <p>45000 BDT</p>
                 <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Royal Bed/Royal Bed.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
@@ -167,9 +168,9 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
                 </div>
-                <p>40000/=</p>
+                <p>40000 BDT</p>
                 <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Luxe Closet/Luxe Closet.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
@@ -177,7 +178,7 @@ session_start();
         </div>
         <div class="product-card">
             <div class="product-text">
-                <h4>TROPIC TABLE SEt</h4>
+                <h4>TROPIC TABLE SET</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -185,12 +186,16 @@ session_start();
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>20000/=</p>
+                <p>20000 BDT</p>
                 <button class="btn fas fa-eye" onclick="window.location.href='product-pages/Tropic Table Set/Tropic Table Set.php';"></button>
                 <button class="btn far fa-heart"></button>
             </div>
             <img src="images/product/table2.png" alt="table-image">
         </div>
+    </section>
+
+    <section class="button-container">
+        <a href="shop.php" class="more-button">More</a>
     </section>
 
     <!--OFFERS-->
@@ -245,6 +250,9 @@ session_start();
         </div>
     </section>
 
+    <section class="button-container">
+        <a href="#blog" class="more-button">More</a>
+    </section>
     <!-- TESTIMONIAL -->
 
     <section class="highlight-text">
@@ -254,7 +262,7 @@ session_start();
     <section class="testimonials">
         <div class="small-container">
             <div class="row">
-                <div class="col-3">
+                <!-- <div class="col-3">
                     <img class="test-img" src="images/product/couch2.png" alt="test-img-01">
                     <i class="fas fa-quote-left"></i>
                     <p>Absolutely love our new sofa! It's stylish, comfy, and fits perfectly in our living room. Great quality, fast delivery too! Amazing experience.</p>
@@ -267,7 +275,7 @@ session_start();
                     </div>
                     <img src="images/user.webp">
                     <h3>Tom Harry</h3>
-                </div>
+                </div> -->
                 <div class="col-3">
                     <img class="test-img" src="images/product/bed1.png" alt="test-img-02">
                     <i class="fas fa-quote-left"></i>
@@ -277,7 +285,7 @@ session_start();
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-stroke"></i>
+                        <i class="far fa-star"></i>
                     </div>
                     <img src="images/user.webp">
                     <h3>John Doe</h3>
@@ -295,6 +303,20 @@ session_start();
                     </div>
                     <img src="images/user.webp">
                     <h3>Jane Doe</h3>
+                </div>
+                <div class="col-3">
+                <img class="test-img" src="images/product/vase3.png" alt="test-img-02">
+                <i class="fas fa-quote-left"></i>
+                <p>Stunning vase! It's the perfect size and looks even better in person than it did online. The quality is great and it's a great value for the price. Highly recommend!</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <img src="images/user.webp">
+                <h3>Amy Johnson</h3>
                 </div>
             </div>
         </div>
@@ -318,13 +340,13 @@ session_start();
                 <pre class="logo">{ SHAROD }</pre>
                 <p>Bringing your home closer to you, one piece at a time.</p>
             </div>
-            <div class="footer-text">
+            <!-- <div class="footer-text">
                 <h4>More</h4>
                 <ul>
-                    <li><a href="../blog-and-review-page/blogs.html">Blogs</a></li>
-                    <li><a href="../blog-and-review-page/review.html">Reviews</a></li>
+                    <li><a href="../blog-and-review-page/blogs.php">Blogs</a></li>
+                    <li><a href="../blog-and-review-page/review.php">Reviews</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="footer-text">
                 <h4>Help</h4>
                 <ul>
@@ -348,7 +370,7 @@ session_start();
                 <ul>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instgram</a></li>
+                    <li><a href="#">Instagram</a></li>
                     <li><a href="#">YouTube</a></li>
                 </ul>
             </div>

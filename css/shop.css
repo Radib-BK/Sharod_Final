@@ -117,7 +117,7 @@ main {
 .sidenav {
   font-family: sans-serif;
   font-size: 2rem;
-  padding: 4rem 2rem 2rem 0rem;
+  padding: 4rem 2rem 0rem 0rem;
   background-color: #333;
 }
 
@@ -135,7 +135,6 @@ main {
 }
 
 .sidenav ul li a:hover {
-  color: rgb(255, 206, 182);
   background-color: #000000c9;
 }
 

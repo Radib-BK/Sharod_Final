@@ -1,0 +1,25 @@
+.button-container {
+    position: relative;
+    text-align: center;
+    margin: 1rem 0rem 3rem;
+  }
+  
+  .more-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+  }
+  
+  .more-button:hover {
+    background-color:#d78e35;
+    color: black;
+    box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.2);
+  }
