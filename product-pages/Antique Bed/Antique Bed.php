@@ -540,7 +540,6 @@ session_start();
             //         allowSubmit = true;
                     
             //         console.log(allowSubmit);
-            //         <?php echo postreviews()?>
             //         console.log(allowSubmit);
                     
                     if(!allowSubmit) {
